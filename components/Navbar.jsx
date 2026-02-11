@@ -212,7 +212,7 @@ const Navbar = () => {
 								? "from-white to-blue-100 bg-clip-text text-transparent"
 								: "from-blue-600 to-purple-600 dark:text-white bg-clip-text text-transparent"
 						}`}>
-						 Abdul Ahad 
+						 Shahid Ansari 
 					</h1>
 				</div>
 				<div className="flex flex-row items-center gap-4">

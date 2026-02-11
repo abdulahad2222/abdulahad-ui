@@ -6,9 +6,9 @@ import Button from "@/components/Button";
 import Image from "next/image";
 
 // images
-import OneStoryPlanet from "@/public/image/projects/web/one-storyplanet/onestoryplanet-4.png";
-import OneStoryPlanet2 from "@/public/image/projects/web/one-storyplanet/onestoryplanet-2.png";
-import OneStoryPlanet3 from "@/public/image/projects/web/one-storyplanet/onestoryplanet-3.png";
+import OneStoryPlanet from "@/public/image/projects/web/onestory/onestoryplanet-4.png";
+import OneStoryPlanet2 from "@/public/image/projects/web/onestory/onestoryplanet-2.png";
+import OneStoryPlanet3 from "@/public/image/projects/web/onestory/onestoryplanet-3.png";
 
 import ProjectAll from "@/public/image/projects.png";
 
@@ -47,7 +47,7 @@ export default function Page() {
 							className="bg-gradient-to-br from-gray-300 to-gray-400 dark:from-gray-700 dark:to-gray-800 rounded-sm h-[400px] md:h-[600px] w-[80vw] md:w-[30vw] grayscale hover:grayscale-0 shadow-2xl dark:shadow-2xl">
 							<Image
 								src={ProjectAll}
-								alt="Abdul Ahad"
+								alt="Shahid Ansari"
 								layout="fill"
 								objectFit="cover"
 								placeholder="blur"
@@ -177,12 +177,12 @@ export default function Page() {
 						<h2 className="text-2xl font-bold tracking-wider mb-3">
 							One Storyplanet
 						</h2>
-						<p className="text-gray-600 text-justify title text-lg">
-							OneStoryPlanet is a story-first social platform that empowers users to share authentic life experiences through text, audio, and video. Built with a distraction-free, accessible interface, it focuses on meaningful human connection over validation, encouraging empathy, unity, and honest self-expression without algorithmic pressure. Designed using modern technologies like React and Next.js, the platform supports scalable, responsive, and user-centric storytelling.
+						<p className="text-gray-600 dark:text-gray-300 text-justify title text-lg leading-relaxed">
+							OneStoryPlanet is a story-first social platform that empowers users to share authentic life experiences through text, audio, and video. Built with a distraction-free, accessible interface, it focuses on meaningful human connection over validation, encouraging empathy, unity, and honest self-expression without algorithmic pressure. Designed using modern technologies like React, Next.js, Inertia.js, and AWS, the platform supports scalable, responsive, and user-centric storytelling. It features a custom-built story editor that allows users to seamlessly create, edit, and publish their narratives.
 						</p>{" "}
 						<div className="mt-5 flex flex-col sm:flex-row gap-3">
 							<Button variation="primary" theme="blue">
-								<Link href="projects/one-storyplanet">More</Link>
+								<Link href="projects/onestoryplanet">More</Link>
 							</Button>
 							<Button
 
