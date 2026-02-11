@@ -1,12 +1,12 @@
 {
-  "name": "shahidansari-portfolio-website",
+  "name": "abdulahad-portfolio-website",
   "author": {
-    "name": "Shahid Ansari",
-    "email": "shahidansarijit1998@gmail.com",
-    "url": "https://shahidansari.my.id"
+    "name": "Abdul Ahad",
+    "email": "abdulahad@example.com",
+    "url": "https://abdulahad.my.id"
   },
   "license": "GPL-3.0",
-  "copyright": "Copyright (C) 2025 Shahid Ansari",
+  "copyright": "Copyright (C) 2025 Abdul Ahad",
   "version": "1.0.0",
   "private": true,
   "engines": {

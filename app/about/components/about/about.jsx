@@ -35,7 +35,7 @@ export default function About() {
 								className="w-full h-full">
 								<Image
 									src={Me1}
-									alt="Shahid Ansari"
+									alt="Abdul Ahad"
 									layout="fill"
 									objectFit="cover"
 									placeholder="blur"
@@ -83,7 +83,7 @@ export default function About() {
 								className="w-full h-full">
 								<Image
 									src={Me3}
-									alt="Shahid Ansari"
+									alt="Abdul Ahad"
 									layout="fill"
 									objectFit="cover"
 									placeholder="blur"
@@ -108,12 +108,12 @@ export default function About() {
 						type: "spring",
 					}}>
 					<h2 className="text-2xl font-bold tracking-wider mb-3">
-						Shahid Ansari
+						Abdul Ahad
 					</h2>
 					<p className="dark:text-gray-400 text-gray-600 text-justify title text-lg">
-						Hey there, I’m Shahid Ansari, a
+						Hey there, I’m Abdul Ahad, a
 						<span className="dark:text-white text-black font-medium">
-							{" "}passionate PHP Laravel developer
+							{" "}passionate Front-End Developer
 						</span>{" "}
 						with around
 						<span className="dark:text-white text-black font-medium">

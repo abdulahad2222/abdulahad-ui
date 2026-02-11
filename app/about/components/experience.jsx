@@ -14,7 +14,7 @@ const experiences = [
 		startDate: "Feb 2022",
 		endDate: "Apr 2023",
 		company: "WebGanges Technologies Private Limited",
-		position: "PHP Laravel developer",
+		position: "Front-End Developer / Web Designer",
 		type: "Freelance",
 		location: "Kanpur, Uttar Pradesh, India",
 		description:
@@ -35,7 +35,7 @@ const experiences = [
 		startDate: "Apr 2022",
 		endDate: "Jul 2024",
 		company: "Vorrow Technology Solutions",
-		position: "PHP Laravel developer",
+		position: "Front-End Developer",
 		type: "Full-time",
 		location: "Lucknow, Uttar Pradesh, India",
 		description:
@@ -60,7 +60,7 @@ const experiences = [
 		startDate: "Aug 2024",
 		endDate: "Present",
 		company: "Next Olive Technologies Pvt Ltd",
-		position: "PHP Laravel developer",
+		position: "Front-End Developer (UI Developer)",
 		type: "Full-time",
 		location: "Lucknow, Uttar Pradesh, India",
 		description:
@@ -139,7 +139,7 @@ function TimelineCard({ experience, index, isEven }) {
 			<div className="bg-gradient-to-r from-black to-gray-800 text-white px-12 py-3 rounded-xl shadow-lg border border-gray-600 min-w-max">
 
 				<div className="flex items-center justify-start gap-6">
-
+					
 					<div className="text-center">
 						<div className="text-sm font-bold">{experience.startDate}</div>
 						<div className="text-xs text-gray-300">Start</div>

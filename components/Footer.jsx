@@ -56,7 +56,7 @@ export default function Footer() {
 					<p className="text-gray-700 dark:text-gray-300 text-sm font-medium">
 						&copy;{new Date().getFullYear()} -{" "}
 						<span className="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400 bg-clip-text text-transparent font-bold">
-							Shahid Ansari
+							Abdul Ahad
 						</span>
 					</p>
 					<p className="text-gray-600 dark:text-gray-400 text-xs mt-2">

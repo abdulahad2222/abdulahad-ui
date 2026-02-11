@@ -1,3 +1,0 @@
-git add .
-git commit -m "Ready for Netlify deploy"
-git push

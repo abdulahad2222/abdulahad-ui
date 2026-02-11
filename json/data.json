@@ -2,26 +2,239 @@
   "Projects": [
     {
       "show": true,
+      "title": "Lcwale.com",
+      "desc": [
+        "Developed a responsive, real-time betting and casino platform using React.js and Node.js. Integrated third-party APIs for live sports data, built dynamic UI components, and translated Figma/PSD designs into mobile-first interfaces. Ensured cross-browser compatibility and accessibility.",
+        "The platform provides a seamless betting experience with real-time updates, secure transactions, and an intuitive user interface. Features include live sports betting, casino games, user authentication, and comprehensive dashboard analytics."
+      ],
+      "year": "2025",
+      "preview": "https://lcwale.com/",
+      "code": "",
+      "thumbnail": "/image/projects/web/lcwale/lcwale-thumbnale-img.png",
+      "images": [
+        "/image/projects/web/lcwale/lcwale-1.png",
+        "/image/projects/web/lcwale/lcwale-2.png",
+        "/image/projects/web/lcwale/lcwale-3.png"
+      ],
+      "tech": [
+        "React.js",
+        "Node.js",
+        "JavaScript",
+        "CSS",
+        "Tailwind",
+        "Third-Party API Integration",
+        "Git",
+        "Responsive Design"
+      ],
+      "slug": "lcwale",
+      "category": [
+        1
+      ]
+    },
+    
+    {
+      "show": false,
+      "title": "Client Personal Protfolio Website",
+      "desc": [
+        "A personal portfolio website that I created for a client. The website is built using two main tech, native (HTML, CSSS, JS) and react based (ReactJs, TailwindCSS, Typescript). The website also created based on the client design, and improved and sliced by me. The website has a few features such as a about page, a project page, resume page, and a contact page.",
+        "The website is created using a modern design and a clean interface that appeals to a wide audience. The website also has a responsive design that makes it easy to use on any device. The website also has a few animations that make the website more interactive and engaging."
+      ],
+      "year": "2025",
+      "preview": "",
+      "code": "",
+      "thumbnail": "/image/projects/web/apii-portfolio/porto-thumbnail.jpg",
+      "images": [
+        "/image/projects/web/apii-portfolio/porto1.png",
+        "/image/projects/web/apii-portfolio/porto2.png",
+        "/image/projects/web/apii-portfolio/porto3.png"
+      ],
+      "tech": [
+        "HTML",
+        "CSS",
+        "JS",
+        "ReactJS",
+        "TailwindCSS",
+        "Typescript"
+      ],
+      "slug": "apii-porto",
+      "category": [
+        1
+      ]
+    },
+    {
+      "show": true,
+      "title": "Mind Mirror",
+      "desc": [
+        "LMS website that integrated Generative AI feauture to track studnet various keys like mood, behavior, and cognitive ability when learning. The website is built using Laravel as a fullstack framework. In this website teacher can track student mood and other metrics data based on the material students accessed.",
+        "The website also has a few features such as a dashboard for the teacher to see the student's data, a material page, and a quiz page. The website also has a few charts to visualize the student's data. The website provided the student captured data that can be downloaded by the teacher.",
+        "The website also has a features to export the lecture data such as the mood, behaviour, and cognitive score to a xlxs file that can be downloaded by the teacher."
+      ],
+      "year": "2024",
+      "preview": "",
+      "code": "",
+      "thumbnail": "/image/projects/web/mind-mirror/mind-thumbnail.jpg",
+      "images": [
+        "/image/projects/web/mind-mirror/mind1.png",
+        "/image/projects/web/mind-mirror/mind2.png",
+        "/image/projects/web/mind-mirror/mind3.png",
+        "/image/projects/web/mind-mirror/mind4.png",
+        "/image/projects/web/mind-mirror/mind5.png"
+      ],
+      "tech": [
+        "PHP",
+        "Laravel",
+        "Bootstrap",
+        "MySQL",
+        "jQuery",
+        "DataTables"
+      ],
+      "slug": "mind-mirror",
+      "category": [
+        1,
+        2
+      ]
+    },
+    {
+      "show": true,
+      "title": "GamaNeo247",
+      "desc": [
+        "Developed a responsive, real-time betting and casino platform using React.js and Node.js. Integrated third-party APIs for live sports data, built dynamic UI components, and translated Figma/PSD designs into mobile-first interfaces. Ensured cross-browser compatibility and accessibility.",
+        "The platform provides a seamless betting experience with real-time updates, secure transactions, and an intuitive user interface. Features include live sports betting, casino games, user authentication, and comprehensive dashboard analytics."
+      ],
+      "year": "2025",
+      "preview": "https://gamaneo247.com/",
+      "code": "",
+      "thumbnail": "/image/projects/web/gamaNeo-247/gamaNeo-247-thumbnale.png",
+      "images": [
+        "/image/projects/web/gamaNeo-247/gamaNeo-247-img1.png",
+        "/image/projects/web/gamaNeo-247/gamaNeo-247-img2.png"
+     
+      ],
+      "tech": [
+        "React.js",
+        "Node.js",
+        "JavaScript",
+        "CSS",
+        "Tailwind",
+        "Third-Party API Integration",
+        "Git",
+        "Responsive Design"
+      ],
+      "slug": "gamaneo247",
+      "category": [
+        1
+      ]
+    },
+     {
+      "show": true,
+      "title": "DOD (Doctors on Duty)",
+      "desc": [
+        "DOD (Doctors on Duty) is a user-friendly website for scheduling doctor appointments and streamlining the appointment booking process. Designed and implemented the website's responsive user interface, ensuring optimal user experience on various devices.",
+        "The website features an intuitive appointment scheduling system, doctor profiles, availability management, and patient dashboard. Fully responsive design for all devices including Mobile, Tablet, and Desktop. Applied SEO strategies and digital marketing techniques to improve online visibility."
+      ],
+      "year": "2024",
+      "preview": "https://www.dodind.com/",
+      "code": "",
+      "thumbnail": "/image/projects/web/dod/dod-thumbnale.png",
+      "images": [
+        "/image/projects/web/dod/dod-1.png",
+        "/image/projects/web/dod/dod-2.png",
+        "/image/projects/web/dod/dod-3.png"
+      ],
+      "tech": [
+        "HTML5",
+        "CSS3",
+        "Bootstrap",
+        "JavaScript",
+        ".NET",
+        "Adobe Photoshop",
+        "Adobe Illustrator",
+        "Responsive Design",
+        "SEO",
+        "UI/UX Design"
+      ],
+      "slug": "dod",
+      "category": [
+        1
+      ]
+    },
+    {
+      "show": true,
+      "title": "News Website Webapp",
+      "desc": [
+        "Developed a dynamic and responsive news website using React.js, integrating Axios to fetch real-time news data based on user-selected country and category filters. The website provides users with up-to-date news from various sources and categories.",
+        "Implemented dynamic filtering capabilities allowing users to filter news articles by country and category. The application features a clean, modern interface with smooth navigation and real-time data updates. Fully responsive design ensures optimal viewing experience across various devices including mobile, tablet, and desktop."
+      ],
+      "year": "2024",
+      "preview": "https://ahadnews.netlify.app/",
+      "code": "",
+      "thumbnail": "/image/projects/web/news-website/news-website-thumbnale.png",
+      "images": [
+        "/image/projects/web/news-website/news-website-1.png",
+        "/image/projects/web/news-website/news-website-2.png"
+      ],
+      "tech": [
+        "React.js",
+        "Axios",
+        "Fetch API",
+        "Bootstrap",
+        "Material UI",
+        "CSS"
+      ],
+      "slug": "news-website",
+      "category": [
+        1
+      ]
+    },
+    {
+      "show": true,
+      "title": "React Image Searching Webapp",
+      "desc": [
+        "Developed a React-based image searching application using Fetch API to retrieve and display images dynamically. Contributed to the project's UI design, adhering to design principles for an intuitive and visually appealing interface.",
+        "Implemented responsive design principles, ensuring a consistent and user-friendly experience across various devices. Successfully integrated external APIs, showcasing proficiency in asynchronous programming and data fetching. The application features advanced search functionality, image gallery with lazy loading, and smooth user interactions."
+      ],
+      "year": "2024",
+      "preview": "https://searchingimgahad.netlify.app",
+      "code": "",
+      "thumbnail": "/image/projects/web/img-searchingApp/img-searching thumbnale.png",
+      "images": [
+        "/image/projects/web/img-searchingApp/img-seaching-1.png"
+      ],
+      "tech": [
+        "React",
+        "JavaScript",
+        "Fetch API",
+        "Bootstrap",
+        "Axios",
+        "CSS",
+        "HTML"
+      ],
+      "slug": "react-image-search",
+      "category": [
+        1
+      ]
+    },
+    {
+      "show": true,
       "title": "OneStoryPlanet",
       "desc": [
         "OneStoryPlanet is a story-first social platform designed to empower individuals to share authentic life experiences through written, audio, and video formats—fostering meaningful human connection, empathy, and unity in a judgment-free environment.",
-        "Designed and developed a story-centric social platform where users are encouraged to share personal narratives rather than short, attention-driven posts, creating deeper emotional engagement and authenticity. Built a custom story editor that allows users to create, edit, refine, and publish personal stories with draft saving capabilities, enabling users to express themselves freely without algorithmic pressure.",
+        "Designed and developed a story-centric social platform where users are encouraged to share personal narratives rather than short, attention-driven posts, creating deeper emotional engagement and authenticity. Built a custom story editor that allows users to create, edit, and format personal stories with draft saving capabilities, enabling users to express themselves freely without algorithmic pressure.",
         "Implemented multi-format story sharing supporting text, audio, and video content, allowing users to choose the format that best reflects their voice and experience. Focused on building a platform centered on connection over validation, encouraging empathy, unity, and shared human experience rather than likes, noise, or judgment.",
-        "Designed an intuitive, distraction-free interface that keeps the storyteller in focus, enhances readability and emotional impact, and supports accessibility and ease of use. Developed the platform using modern technologies including React, Next.js, Inertia.js, and AWS for scalable architecture, component-based design for maintainability, and responsive UI across devices."
+        "Designed an intuitive, distraction-free interface that keeps the storyteller in focus, enhances readability and emotional impact, and supports accessibility and ease of use. Developed the platform using modern frontend technologies including React and Next.js for scalable architecture, component-based design for maintainability, and responsive UI across devices. Structured the platform to promote authentic self-expression, respectful interaction, and a non-judgmental, supportive environment."
       ],
       "year": "2024",
       "preview": "https://onestoryplanet.com",
       "code": "",
-      "thumbnail": "/image/projects/web/onestory/onestoryplanet-thumbnale-img.png",
+      "thumbnail": "/image/projects/web/one-storyplanet/onestoryplanet-thumbnale-img.png",
       "images": [
-        "/image/projects/web/onestory/onestoryplanet-2.png",
-        "/image/projects/web/onestory/onestoryplanet-3.png",
-        "/image/projects/web/onestory/onestoryplanet-4.png"
+        "/image/projects/web/one-storyplanet/onestoryplanet-2.png",
+        "/image/projects/web/one-storyplanet/onestoryplanet-3.png",
+        "/image/projects/web/one-storyplanet/onestoryplanet-4.png"
       ],
       "tech": [
         "React",
         "Next.js",
-        "Inertia.js",
         "Tailwind CSS",
         "Node.js",
         "Laravel",
@@ -38,271 +251,347 @@
     },
     {
       "show": true,
-      "title": "WoolfrApp",
+      "title": "Javanese Translation Website",
       "desc": [
-        "WoolfrApp is a next-generation LGBTQ+ social platform built for gay, bisexual, transgender, and queer communities.",
-        "Enables real-time communication, community discovery, and key match–based profile connections.",
-        "Supports free, unlimited messaging powered by low-latency real-time technology.",
-        "Designed with a secure, scalable, and mobile-first architecture for global access.",
-        "Focused on privacy, inclusivity, and user safety with modern authentication and encrypted data.",
-        "Delivers a fast, intuitive, and seamless cross-platform experience across all devices."
-      ],
-      "year": "2023",
-      "preview": "https://woolfrapp.com",
-      "code": "",
-      "thumbnail": "/image/projects/web/woolfr/woolfer_thumbnale.png",
-      "images": [
-        "/image/projects/web/woolfr/dashboard.png",
-        "/image/projects/web/woolfr/gallery.png",
-        "/image/projects/web/woolfr/wolfr_maps.png"
-      ],
-      "tech": [
-        "Bootstrap CSS",
-        "Core PHP",
-        "Node.js",
-        "Socket.IO",
-        "Google Cloud Vision API",
-        "Leaflet Maps",
-        "Database",
-        "MySQL",
-        "UI/UX Design",
-        "Responsive Design"
-      ],
-      "slug": "woolfrapp",
-      "category": [
-        1
-      ]
-    },
-    {
-      "show": true,
-      "title": "Freelancer & Handyman Marketplace",
-      "desc": [
-        "A unified marketplace for freelance and handyman services for businesses and individuals.",
-        "Connects users with skilled professionals across digital, technical, and on-site services.",
-        "Allows users to post tasks, compare profiles, and hire the right expert with ease.",
-        "Supports transparent pricing, flexible timelines, and affordable service options.",
-        "Designed to save time and reduce operational costs through streamlined workflows.",
-        "Delivers a reliable, user-friendly experience focused on quality and efficiency."
+        "A Javanese ngoko - krama translation website that I created as a collaborative project with my friends. The website is built using the original Transformer architecture by Vaswani et al. (2017). Built with Python, TensorFlow, Flask, HTML, and CSS, the website allows users to input text in Javanese krama and receive the corresponding ngoko translation.",
+        "The website is designed to be simple to use, with a clean and modern interface that appeals to a wide audience. Users can input text in Javanese krama and receive the corresponding ngoko translation. The Project also provide ipynb file for the model training and the model itself."
       ],
       "year": "2024",
-      "preview": "https://wrqit.nextolive.com",
-      "code": "",
-      "thumbnail": "/image/projects/web/wrqit/wrqit_thubnale.png",
+      "preview": "",
+      "code": "https://github.com/Alvalens/web-javanese-translation",
+      "thumbnail": "/image/projects/ai/javanese-translation/javanese-translation-thumbnail.jpg",
       "images": [
-        "/image/projects/web/wrqit/homepage.png",
-        "/image/projects/web/wrqit/after_login_homepage.png",
-        "/image/projects/web/wrqit/after_login_dashboard.png"
+        "/image/projects/ai/javanese-translation/javanese-translation1.png",
+        "/image/projects/ai/javanese-translation/javanese-translation2.png"
       ],
       "tech": [
-        "Html/CSS",
-        "Laravel",
-        "MySQL",
-        "Database",
-        "UI/UX Design"
+        "Transformers",
+        "Python",
+        "Tensorflow",
+        "Flask",
+        "HTML",
+        "CSS"
       ],
-      "slug": "freelancer-handyman-marketplace",
+      "slug": "javanese-translation",
       "category": [
-        1
+        2
       ]
     },
     {
       "show": true,
-      "title": "School Bus Track",
+      "title": "SIPETI: Heart Prediction Website",
       "desc": [
-        "School Bus Track is a smart platform that helps parents track their children’s daily school transportation.",
-        "Provides real-time GPS tracking of school buses for accurate live location updates.",
-        "Sends instant notifications when the bus is approaching the pickup or drop-off point.",
-        "Alerts parents when their child boards and exits the bus safely.",
-        "Enables live trip monitoring to ensure transparency throughout the journey.",
-        "Improves safety, communication, and peace of mind for parents and schools."
-      ],
-      "year": "2023",
-      "preview": "https://schoolbustrack.com",
-      "code": "",
-      "thumbnail": "/image/projects/web/bustracking/bustracking_thubnale.png",
-      "images": [
-        "/image/projects/web/bustracking/login.png",
-        "/image/projects/web/bustracking/school_dashboard.png",
-        "/image/projects/web/bustracking/student_list.png"
-      ],
-      "tech": [
-        "React",
-        "Leaflet Maps",
-        "GPS Tracking",
-        "Firebase Realtime Messaging",
-        "Laravel",
-        "MariaDB",
-        "Database"
-      ],
-      "slug": "schoolbustrack",
-      "category": [
-        1
-      ]
-    },
-    {
-      "show": true,
-      "title": "OpHop Admin Platform",
-      "desc": [
-        "OpHop is a centralized admin platform for managing customers, organizations, and stores.",
-        "Provides tools to manage products, bins, and categories efficiently.",
-        "Displays real-time activity metrics and operational insights.",
-        "Tracks engagement data such as views, shares, and actions.",
-        "Includes review monitoring, support tracking, and reporting tools.",
-        "Designed for secure, scalable, and efficient administrative workflows."
+        "This is a Machine Learning based website that I created as a collage project. The website is built using Decision Tree algorithm and Flask. The website is a heart attack prediction website that can predict whether a person will get a heart attack or not based on their health condition.",
+        "In this website user can predict, customize dataset, customize model, and see the model performance. The website also has a few features such as a dashboard for the user to see the model performance, and a few charts to visualize the decision tree model."
       ],
       "year": "2024",
-      "preview": "https://ophop.org",
-      "code": "",
-      "thumbnail": "/image/projects/web/ophop/ophop_dashboard_thubnale.png",
+      "preview": "",
+      "code": "https://github.com/Alvalens/heart-attack-prediction",
+      "thumbnail": "/image/projects/ai/heart-attack-prediction/heart-attack-prediction-thumbnail.jpg",
       "images": [
-        "/image/projects/web/ophop/dashboard.png",
-        "/image/projects/web/ophop/store_dashboard.png",
-        "/image/projects/web/ophop/manage_products.png"
+        "/image/projects/ai/heart-attack-prediction/heart-attack1.png",
+        "/image/projects/ai/heart-attack-prediction/heart-attack2.png",
+        "/image/projects/ai/heart-attack-prediction/heart-attack3.png",
+        "/image/projects/ai/heart-attack-prediction/heart-attack4.png",
+        "/image/projects/ai/heart-attack-prediction/heart-attack5.png"
       ],
       "tech": [
-        "Vue.js",
+        "Decision Tree",
+        "Python",
+        "Sklearn",
+        "Flask",
+        "HTML",
+        "CSS"
+      ],
+      "slug": "heart-attack",
+      "category": [
+        2
+      ]
+    },
+    {
+      "show": true,
+      "title": "Generative Trivia",
+      "desc": [
+        "A generative trivia website built with Next.js, Firebase, NextAuth, Google OAuth, and TypeScript. Users can generate trivia questions for predefined school subjects and answer them with a unique interactive input style. The application supports user authentication with Google and stores data in Firestore.",
+        "The project is a culmination of my passion for web development and my desire to create a fun and interactive learning platform. The website is designed to be user-friendly and engaging, with a clean and modern interface that appeals to a wide audience. The trivia questions are generated using the Gemini API, which provides a diverse range of questions for users to answer."
+      ],
+      "year": "2024",
+      "preview": "https://generative-trivia.vercel.app/",
+      "code": "https://github.com/Alvalens/generative-trivia",
+      "thumbnail": "/image/projects/web/trivia/trivia-thumbnail.png",
+      "images": [
+        "/image/projects/web/trivia/trivia1.png",
+        "/image/projects/web/trivia/trivia2.png",
+        "/image/projects/web/trivia/trivia3.png"
+      ],
+      "tech": [
+        "NextJS",
+        "Shadcn UI",
         "Tailwind CSS",
+        "Firebase",
+        "Gemini API"
+      ],
+      "slug": "trivia",
+      "category": [
+        1,
+        2
+      ]
+    },
+    {
+      "show": true,
+      "title": "Saku Senyum",
+      "desc": [
+        "Saku Senyum is a website that I created as a Fullstack Developer in PT Hafdzahmedia based on client request. The website is a sales management for UMKM or small business. The website is built using Next.js, TypeScript, Tailwind CSS, ShadCN UI, Prisma, and MySQL.",
+        "The website has a few features such as a dashboard for the user to manage their business sales, a statistic page, and a sales report page. User can see their sales performance in a fancy chart to make it easier to understand. The user also can export their sales report to a PDF file which can be printed or saved to their device."
+      ],
+      "year": "2024",
+      "thumbnail": "/image/projects/web/saku-senyum/saku-senyum-thumbnail.png",
+      "images": [
+        "/image/projects/web/saku-senyum/saku-senyum1.png",
+        "/image/projects/web/saku-senyum/saku-senyum2.png",
+        "/image/projects/web/saku-senyum/saku-senyum3.png",
+        "/image/projects/web/saku-senyum/saku-senyum4.png"
+      ],
+      "tech": [
+        "NextJS",
+        "Typescript",
+        "Shadcn UI",
+        "Tailwind CSS",
+        "Prisma",
+        "MySQL"
+      ],
+      "slug": "saku-senyum",
+      "category": [
+        1
+      ]
+    },
+    {
+      "show": true,
+      "title": "Simadun",
+      "desc": [
+        "Simadun is an Exam Management System developed for doctoral students in the Department of Electrical Engineering and Informatics Universitas Negeri Malang. The system facilitates the management of five different types of examinations, allowing students to apply for exams with ease. Professors and program heads can efficiently oversee the exam processes.",
+        "With Simadun, students can submit their exam applications online, track their application status, and receive timely notifications regarding their exam schedules. Program heads and relevant lecturers have access to comprehensive dashboards where they can manage exam requests, allocate resources, and monitor overall exam logistics. "
+      ],
+      "year": "2024",
+      "thumbnail": "/image/projects/web/simadun/simadun-thumbnail.png",
+      "images": [
+        "/image/projects/web/simadun/simadun1.png",
+        "/image/projects/web/simadun/simadun2.png",
+        "/image/projects/web/simadun/simadun3.png",
+        "/image/projects/web/simadun/simadun4.png",
+        "/image/projects/web/simadun/simadun5.png"
+      ],
+      "tech": [
+        "PHP",
         "Laravel",
+        "Bootstrap",
         "MySQL",
-        "Database",
-        "UI/UX Design",
-        "Admin Dashboard",
-        "Responsive Design"
+        "jQuery",
+        "DataTables"
       ],
-      "slug": "ophop-admin-platform",
+      "slug": "simadun",
       "category": [
         1
       ]
     },
     {
       "show": true,
-      "title": "Bookie Inventory Management System",
+      "title": "LUDOang",
       "desc": [
-        "A role-based inventory and project management system designed for bookie operations.",
-        "Supports Admin, Bookie, and User roles with controlled access and permissions.",
-        "Admins manage users, bookies, system settings, and overall platform configuration.",
-        "Bookies create and manage projects, track inventory, and assign coin values.",
-        "Users participate in projects and earn or spend coins through system activities.",
-        "Includes secure coin transactions, reporting, and transparent inventory tracking."
+        "LUDOang is a game that my team and I created for a final project in my university. The game is built python, pygame, and OpenGL. The game is a 2D game that is inspired by a Ludo game. The game has a few features such randomZone, and a 3D dice.",
+        "RandomZone is a feature that allows the player to get a random number of steps. The 3D dice is a feature that allows the player to roll a 3D dice. The game also has a few other features menuy screen and also loading screen.",
+        "Beside that the game also has a audio theme that will play when the game is started. The game also has a few sound effects such as dice roll sound, and a sound when the player win the game."
       ],
-      "year": "2025",
-      "preview": "http://108.60.209.215:3738",
-      "code": "",
-      "thumbnail": "/image/projects/web/bookieinventorymanagement/bookie_thumbnale.png",
+      "year": "2023",
+      "preview": "https://github.com/Alvalens/ludo-game/releases/tag/pre-release",
+      "code": "https://github.com/Alvalens/ludo-game",
+      "thumbnail": "/image/projects/other/LUDOang/ludo-thumbnail.png",
       "images": [
-        "/image/projects/web/bookieinventorymanagement/homepage.png"
+        "/image/projects/other/LUDOang/ludo1.png",
+        "/image/projects/other/LUDOang/ludo2.png",
+        "/image/projects/other/LUDOang/ludo3.png"
       ],
       "tech": [
-        "React",
-        "Node.js",
-        "mongoDB",
-        "Role-Based Access Control"
+        "Python",
+        "Pygame",
+        "OpenGL"
       ],
-      "slug": "bookie-inventory-management-system",
+      "slug": "ludoang",
       "category": [
-        1
+        9
       ]
     },
     {
       "show": true,
-      "title": "Nutri Calorie App",
+      "title": "VICC Landing Page",
       "desc": [
-        "Nutri Calorie App is a smart health and nutrition tracking application for daily wellness.",
-        "Calculates daily calorie intake based on food, drinks, and meal types.",
-        "Tracks water consumption to help users maintain proper hydration levels.",
-        "Supports diet planning with categorized meals such as breakfast, lunch, dinner, and snacks.",
-        "Provides per-day summaries for calories, water intake, and nutritional balance.",
-        "Designed to promote healthy eating habits and mindful lifestyle management."
+        "This project is one of my freelance projects. This project is a landing page for Vocational Inter-cultural Camp event held by Vocational Faculty of ISBM University. The website is built using Next.js, Javascript, and Tailwind CSS.",
+        "The website is mainly frontend project, which is already using responsive design. The website has a few features such carousel, and a few animations. The website also has a few pages such as home, topic, and speaker page."
       ],
-      "year": "2025",
-      "preview": "http://108.60.209.215:3210",
-      "code": "",
-      "thumbnail": "/image/projects/web/nutri/nutri_thumbnale.png",
+      "year": "2023",
+      "preview": "https://inter-cultural-camp.vercel.app",
+      "thumbnail": "/image/projects/web/vicc/vicc-thumbnail.jpg",
       "images": [
-        "/image/projects/web/nutri/diete.png",
-        "/image/projects/web/nutri/foods.png",
-        "/image/projects/web/nutri/profile.png"
+        "/image/projects/web/vicc/vicc1.png",
+        "/image/projects/web/vicc/vicc2.png",
+        "/image/projects/web/vicc/vicc3.png"
       ],
       "tech": [
-        "React",
-        "Node.js",
-        "mongoDB",
-        "Nutrition API",
-        "Calorie Calculation",
-        "Chatgpt API",
-        "Html/CSS",
+        "JavaScript",
+        "NextJS",
         "Tailwind CSS"
       ],
-      "slug": "nutri-calorie-app",
+      "slug": "vicc",
       "category": [
         1
       ]
     },
     {
       "show": true,
-      "title": "Adult Playpen",
+      "title": "React Realtime Chat",
       "desc": [
-        "Adult Playpen is an adult-focused social sharing network inspired by Facebook-style interactions.",
-        "Supports multiple connection intents including Dating, Relationships, Friends, and Networking.",
-        "Allows users to define personal preferences and positions for better social matching.",
-        "Provides secure chat, content sharing, and private community engagement features.",
-        "Built with strong privacy controls, consent-based visibility, and user safety measures.",
-        "Delivers a modern, scalable, and community-driven social experience."
+        "My ambitious project that delves into the world of interactive web development using React. This project is a realtime chat application that allows users to create chat rooms and chat with other users in realtime. The application is built using React, Firebase, and Daisy UI.",
+        "This project is my second react project and my first project using Firebase. I learned a lot about how to use Firebase and how to use React to create a realtime application. I also learned how to use Daisy UI, a CSS framework that is built on top of Tailwind CSS. "
       ],
-      "year": "2025",
-      "preview": "https://adultplaypen.com/",
-      "code": "",
-      "thumbnail": "/image/projects/web/adultplaypen/adult_thubnale.png",
+      "year": "2023",
+      "preview": "https://react-chat-rouge.vercel.app",
+      "code": "https://github.com/Alvalens/react-realtime-chat",
+      "thumbnail": "/image/projects/web/react-chat/chat-thumbnail.png",
       "images": [
-        "/image/projects/web/adultplaypen/login.png"
+        "/image/projects/web/react-chat/chat1.png",
+        "/image/projects/web/react-chat/chat2.png",
+        "/image/projects/web/react-chat/chat3.png",
+        "/image/projects/web/react-chat/chat4.png"
       ],
       "tech": [
+        "JavaScript",
         "React",
-        "Node.js",
-        "Socket.IO",
-        "MongoDB",
-        "Google Cloud Vision API",
-        "Chatgpt API",
-        "Role-Based Access Control",
-        "UI/UX Design",
-        "Responsive Design"
+        "React Router",
+        "Firebase",
+        "Daisy UI"
       ],
-      "slug": "adult-playpen",
+      "slug": "react-chat",
       "category": [
         1
       ]
     },
     {
       "show": true,
-      "title": "Reward App",
+      "title": "React Tools",
       "desc": [
-        "A digital reward platform designed to incentivize user engagement and activity.",
-        "Allows users to earn rewards through tasks, actions, or participation.",
-        "Provides a simple and intuitive interface to track points and rewards.",
-        "Supports reward history, balance management, and redemption workflows.",
-        "Built to be scalable, secure, and easy to manage for administrators.",
-        "Delivers a smooth, user-friendly experience focused on motivation and retention."
+        "React Tools is a groundbreaking and user-friendly project that brings together a comprehensive collection of tools and components crafted with cutting-edge technologies, including React, React Router, and TailwindCSS. What sets this project apart is that it's not just a suite of powerful features, but it's also a significant milestone as it marks my very first venture into the world of React development.",
+        "Unlike traditional web applications, React Tools cleverly utilizes browser local storage, eliminating the need for external databases. This not only ensures seamless performance but also prioritizes user data privacy. ",
+        "The Todo List keeps tasks in check with intuitive task management capabilities, ensuring you never miss a beat. The note-taking feature provides a hassle-free way to jot down ideas and crucial information, accessible whenever inspiration strikes. Additionally, our robust expense tracker simplifies financial management by recording and categorizing expenses, delivering insightful spending analysis."
       ],
-      "year": "2022",
-      "preview": "https://rewardapp.com",
-      "code": "",
-      "thumbnail": "/image/projects/web/rewardapp/reward_thubnale.png",
+      "year": "2023",
+      "preview": "https://react-tools-flax.vercel.app",
+      "code": "https://github.com/Alvalens/react-tools",
+      "thumbnail": "/image/projects/web/tools/tools-thumbnail.png",
       "images": [
-        "/image/projects/web/rewardapp/after_login_dashboard.png",
-        "/image/projects/web/rewardapp/community_page.png",
-        "/image/projects/web/rewardapp/task_page.png"
+        "/image/projects/web/tools/tools.png",
+        "/image/projects/web/tools/tools1.png",
+        "/image/projects/web/tools/tools2.png",
+        "/image/projects/web/tools/tools3.png"
       ],
       "tech": [
-        "Html/CSS",
-        "Laravel",
-        "MySQL",
-        "Database",
-        "UI/UX Design"
+        "Javascript",
+        "React",
+        "React Router",
+        "TailwindCSS"
       ],
-      "slug": "reward-app",
+      "slug": "react-tools",
+      "category": [
+        1
+      ]
+    },
+    {
+      "show": true,
+      "title": "Aleph Discord Bot",
+      "desc": [
+        "Aleph is a Discord bot that I created for my dircord server to use. The bot is built using Python and the discord.py library. The bot has image grabber feauture that takes argument (keywords) and returns an image from the internet.",
+        "Other than that this bot has a few other features such as utility command to delete a messages, and a command to get the server's ping. This bot is still in development and I plan to add more features in the future."
+      ],
+      "year": "2023",
+      "preview": "",
+      "code": "https://github.com/Alvalens/aleph-discord-bot",
+      "thumbnail": "/image/projects/other/bot/bot-thumbnail.png",
+      "images": [
+        "/image/projects/other/bot/bot1.png",
+        "/image/projects/other/bot/bot2.png"
+      ],
+      "tech": [
+        "Python",
+        "Discord.py",
+        "Google Serp API"
+      ],
+      "slug": "aleph-discord-bot",
+      "category": [
+        9
+      ]
+    },
+    {
+      "show": true,
+      "title": "LPTK Cup 2023 Website",
+      "desc": [
+        "LPTK Cup UM is a website that I created for a competition held by  the ISBM University. The website is mainly built using Laravel and Bootstrap. The website has a few features such as a registration form, a login system, article system, file upload,  and a dashboard for the admin to manage the contents.",
+        "This project is my second freelance project, this project is not as big as my first freelance project but I learned a lot from this project. I learn how to manage a project and how to work with a team."
+      ],
+      "year": "2023",
+      "preview": "",
+      "code": "",
+      "thumbnail": "/image/projects/web/lptk/lptk1.png",
+      "images": [
+        "/image/projects/web/lptk/lptk1.png",
+        "/image/projects/web/lptk/lptk2.png",
+        "/image/projects/web/lptk/lptk3.png",
+        "/image/projects/web/lptk/lptk4.png"
+      ],
+      "tech": [
+        "PHP",
+        "Laravel",
+        "Bootstrap",
+        "MySQL",
+        "jQuery",
+        "DataTables"
+      ],
+      "slug": "lptk-cup-2023",
+      "category": [
+        1
+      ]
+    },
+    {
+      "show": true,
+      "title": "NU INO Website",
+      "desc": [
+        "My first freelance project. This project is a website for a School based on a JALAKAR curriculum. The website is built mainly using Laravel and Bootstrap.",
+        "This website is LMS like system, have a user management, user auth, quiz and material for student and FAQ",
+        "In this project I learned how to work with a team and how to manage a project. I also learned new library such as livewire and alpine.js."
+      ],
+      "year": "2023",
+      "preview": "",
+      "code": "",
+      "thumbnail": "/image/projects/web/ino/ino1.png",
+      "images": [
+        "/image/projects/web/ino/ino1.png",
+        "/image/projects/web/ino/ino2.png",
+        "/image/projects/web/ino/ino3.png"
+      ],
+      "tech": [
+        "PHP",
+        "Laravel",
+        "Bootstrap",
+        "Livewire",
+        "MySQL",
+        "jQuery",
+        "DataTables"
+      ],
+      "slug": "nu-ino-website",
       "category": [
         1
       ]
     }
+    
+   
+    
   ]
 }

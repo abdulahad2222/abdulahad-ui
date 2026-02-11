@@ -8,26 +8,66 @@ import Image from "next/image";
 // - Messages persisted to localStorage
 // - Placeholder hook to integrate an API/AI backend
 
-import projectsData from "../json/data.json";
-
 // Edit CONTACTS below to include your real contact details.
 const CONTACTS = {
-	email: "shahidansarijit1998@gmail.com",
-	phone: "9795837457",
+	email: "abdulahadfarooqui73@gmail.com",
+	phone: "9699020007",
 	website: "/",
 };
 
 // Projects data
-const PROJECTS = projectsData.Projects.map((p, idx) => ({
-	id: `p${idx + 1}`,
-	name: p.title,
-	title: p.title,
-	year: p.year,
-	description: Array.isArray(p.desc) ? p.desc.join("\n\n") : p.desc,
-	skills: p.tech || [],
-	url: p.preview,
-	thumbnail: p.thumbnail,
-}));
+const PROJECTS = [
+	{
+		id: "p1",
+		name: "GamaNeo247",
+		title: "Online Betting Platform",
+		year: "02/2025 - Present",
+		description: "Developed a responsive, real-time betting and casino platform using React.js and Node.js. Integrated third-party APIs for live sports data, built dynamic UI components, and translated Figma/PSD designs into mobile-first interfaces. Ensured cross-browser compatibility and accessibility.",
+		skills: ["React.js", "Node.js", "JavaScript", "CSS", "Tailwind", "Third-Party API Integration", "Git", "Responsive Design"],
+		url: "https://gamaneo247.com/",
+		thumbnail: "/image/projects/web/gamaneo247/gamaneo247-thumbnail.jpg"
+	},
+	{
+		id: "p2",
+		name: "DOD (Doctors on Duty)",
+		title: "Medical Appointment Booking System",
+		year: "09/2024 - Present",
+		description: "Designed and implemented a user-friendly website for scheduling doctor appointments and streamlining the appointment booking process. Created responsive user interfaces using HTML, CSS, Bootstrap, and JavaScript. Applied SEO strategies and digital marketing techniques. Utilized Adobe Photoshop and Adobe Illustrator for UI/UX design. Fully responsive design for all devices including Mobile, Tablet, and Desktop.",
+		skills: ["HTML5", "CSS3", "Bootstrap", "JavaScript", ".NET", "Adobe Photoshop", "Adobe Illustrator", "Responsive Design", "SEO", "UI/UX Design"],
+		url: "https://www.dodind.com/",
+		thumbnail: "/image/projects/web/dod/dod-thumbnail.jpg"
+	},
+	{
+		id: "p3",
+		name: "News Website Webapp",
+		title: "React News Application",
+		year: "03/2024 - 05/2024",
+		description: "Developed a dynamic and responsive news website using React.js, integrating Axios to fetch real-time news data based on user-selected country and category filters. Implemented dynamic filtering capabilities allowing users to filter news articles by country and category. Ensured fully responsive design for various devices.",
+		skills: ["React.js", "Axios", "Fetch API", "Bootstrap", "Material UI", "CSS"],
+		url: "https://ahadnews.netlify.app/",
+		thumbnail: "/image/projects/web/news-app/news-thumbnail.jpg"
+	},
+	{
+		id: "p4",
+		name: "React Image Searching Webapp",
+		title: "Image Search Application",
+		year: "02/2024 - Present",
+		description: "Developed a React-based image searching application using Fetch API to retrieve and display images dynamically. Contributed to the project's UI design, adhering to design principles for an intuitive and visually appealing interface. Implemented responsive design principles, ensuring a consistent and user-friendly experience across various devices. Successfully integrated external APIs, showcasing proficiency in asynchronous programming and data fetching.",
+		skills: ["React", "JavaScript", "Fetch API", "Bootstrap", "Axios", "CSS", "HTML"],
+		url: "https://searchingimgahad.netlify.app",
+		thumbnail: "/image/projects/web/image-search/image-search-thumbnail.jpg"
+	},
+	{
+		id: "p5",
+		name: "OneStoryPlanet",
+		title: "Social Networking Platform (Story-centric)",
+		year: "2024 - Present",
+		description: "OneStoryPlanet is a story-first social platform designed to empower individuals to share authentic life experiences through written, audio, and video formats—fostering meaningful human connection, empathy, and unity in a judgment-free environment. Designed and developed a story-centric social platform where users are encouraged to share personal narratives rather than short, attention-driven posts, creating deeper emotional engagement and authenticity. Built a custom story editor that allows users to create, edit, and format personal stories with draft saving capabilities. Implemented multi-format story sharing supporting text, audio, and video content. Focused on building a platform centered on connection over validation, encouraging empathy, unity, and shared human experience. Designed an intuitive, distraction-free interface that keeps the storyteller in focus and enhances readability and emotional impact.",
+		skills: ["React", "Next.js", "Tailwind CSS", "Node.js", "Laravel", "Database", "AWS", "UI/UX Design", "Responsive Design", "Component-based Architecture"],
+		url: "https://onestoryplanet.com",
+		thumbnail: "/image/projects/web/onestoryplanet/onestoryplanet-thumbnail.jpg"
+	}
+];
 
 // Demo Q&A structure - questions and their follow-up options
 const DEMO_QUESTIONS = {
@@ -58,22 +98,30 @@ const DEMO_QUESTIONS = {
 		{ id: "q4b", text: "Do you offer discounts?" },
 		{ id: "q4c", text: "Can I get a custom quote?" },
 	],
-	q5: PROJECTS.map((p, idx) => ({
-		id: `q5${String.fromCharCode(97 + idx)}`,
-		text: `Tell me about ${p.name}`
-	})),
+	q5: [
+		{ id: "q5a", text: "Tell me about GamaNeo247" },
+		{ id: "q5b", text: "Tell me about DOD" },
+		{ id: "q5c", text: "Tell me about News Website" },
+		{ id: "q5d", text: "Tell me about Image Search App" },
+		{ id: "q5e", text: "Tell me about OneStoryPlanet" },
+	],
 };
 
 // Demo answers for each question
 const DEMO_ANSWERS = {
 	q1: "We offer a wide range of services including web development, mobile apps, digital marketing, and consulting. Which specific service interests you?",
-	q2: `You can reach us via email at ${CONTACTS.email} or call us at ${CONTACTS.phone}. We're here to help!`,
+	q2: "You can reach us via email at abdulahadfarooqui73@gmail.com or call us at 9699020007. We're here to help!",
 	q3: "Our business hours are Monday to Friday, 9 AM to 6 PM. We're also available for urgent matters outside these hours.",
 	q4: "Our pricing varies based on the project scope and requirements. We offer competitive rates and can provide a custom quote. Would you like more details?",
 	q5: "Here are some of my recent projects. Click on any project to learn more about it!",
 	q1a: "Service A includes comprehensive web development solutions with modern frameworks and responsive design.",
 	q1b: "Service B focuses on mobile app development for both iOS and Android platforms.",
 	q1c: "Yes! We specialize in custom solutions tailored to your specific business needs.",
+	q5a: `**GamaNeo247** - Online Betting Platform\n\n**Duration:** 02/2025 - Present\n\n**Description:** ${PROJECTS[0].description}\n\n**Technologies:** ${PROJECTS[0].skills.join(", ")}\n\n**Live Website:** ${PROJECTS[0].url}`,
+	q5b: `**DOD (Doctors on Duty)** - Medical Appointment Booking System\n\n**Duration:** 09/2024 - Present\n\n**Description:** ${PROJECTS[1].description}\n\n**Technologies:** ${PROJECTS[1].skills.join(", ")}\n\n**Live Website:** ${PROJECTS[1].url}`,
+	q5c: `**News Website Webapp** - React News Application\n\n**Duration:** 03/2024 - 05/2024\n\n**Description:** ${PROJECTS[2].description}\n\n**Technologies:** ${PROJECTS[2].skills.join(", ")}\n\n**Live Website:** ${PROJECTS[2].url}`,
+	q5d: `**React Image Searching Webapp** - Image Search Application\n\n**Duration:** 02/2024 - Present\n\n**Description:** ${PROJECTS[3].description}\n\n**Technologies:** ${PROJECTS[3].skills.join(", ")}\n\n**Live Website:** ${PROJECTS[3].url}`,
+	q5e: `**OneStoryPlanet** - Social Networking Platform (Story-centric)\n\n**Duration:** 2024 - Present\n\n**Description:** ${PROJECTS[4].description}\n\n**Technologies:** ${PROJECTS[4].skills.join(", ")}\n\n**Live Website:** ${PROJECTS[4].url}`,
 	q2a: `Our email is: ${CONTACTS.email}`,
 	q2b: `Our phone number is: ${CONTACTS.phone}`,
 	q2c: "We operate remotely but can arrange in-person meetings if needed. Let me know your location!",
@@ -84,13 +132,6 @@ const DEMO_ANSWERS = {
 	q4b: "Yes! We offer discounts for long-term projects and bulk services. Let's discuss your needs.",
 	q4c: "Absolutely! We'd be happy to provide a custom quote based on your specific requirements.",
 };
-
-// Dynamically add project-specific answers
-PROJECTS.forEach((p, idx) => {
-	const key = `q5${String.fromCharCode(97 + idx)}`;
-	DEMO_ANSWERS[key] = `**${p.name}**\n\n**Duration:** ${p.year}\n\n**Description:** ${p.description}\n\n**Technologies:** ${p.skills.join(", ")}\n\n**Live Website:** ${p.url}`;
-});
-
 
 const Chat = () => {
 	const [open, setOpen] = useState(false);
@@ -135,16 +176,16 @@ const Chat = () => {
 				setIsDarkMode(false);
 			}
 		};
-
+		
 		checkDarkMode();
-
+		
 		// Watch for dark mode changes
 		const observer = new MutationObserver(checkDarkMode);
 		observer.observe(document.documentElement, {
 			attributes: true,
 			attributeFilter: ['class']
 		});
-
+		
 		return () => observer.disconnect();
 	}, []);
 
@@ -270,7 +311,7 @@ const Chat = () => {
 	function handleContactClick(type) {
 		const contactInfo = CONTACTS[type];
 		if (!contactInfo) return;
-
+		
 		const contactMsg = {
 			id: Date.now() + Math.floor(Math.random() * 1000),
 			author: "owner",
@@ -351,8 +392,8 @@ const Chat = () => {
 						</div>
 					</div>
 
-					<div
-						ref={listRef}
+					<div 
+						ref={listRef} 
 						className="h-[400px] px-4 py-3 overflow-y-auto space-y-3 bg-gray-50 dark:bg-gray-900 project-scrollbar min-h-0"
 						style={{
 							scrollbarWidth: 'thin',
@@ -420,10 +461,11 @@ const Chat = () => {
 											key={q.id}
 											onClick={() => handleQuickReply(q.id, q.text)}
 											disabled={clickedQuestions.has(q.id)}
-											className={`px-4 py-2 text-sm rounded-lg border transition-all text-left ${clickedQuestions.has(q.id)
-												? "bg-gray-200 dark:bg-gray-700 text-gray-500 dark:text-gray-400 border-gray-300 dark:border-gray-600 cursor-not-allowed"
-												: "bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 border-gray-300 dark:border-gray-600 hover:bg-blue-50 dark:hover:bg-gray-700 hover:border-blue-400 dark:hover:border-blue-500 cursor-pointer"
-												}`}
+											className={`px-4 py-2 text-sm rounded-lg border transition-all text-left ${
+												clickedQuestions.has(q.id)
+													? "bg-gray-200 dark:bg-gray-700 text-gray-500 dark:text-gray-400 border-gray-300 dark:border-gray-600 cursor-not-allowed"
+													: "bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 border-gray-300 dark:border-gray-600 hover:bg-blue-50 dark:hover:bg-gray-700 hover:border-blue-400 dark:hover:border-blue-500 cursor-pointer"
+											}`}
 										>
 											{q.text}
 										</button>
@@ -447,7 +489,7 @@ const Chat = () => {
 								<div key={m.id}>
 									<div className={`flex ${m.author === "you" ? "justify-end" : "justify-start"}`}>
 										<div className={`max-w-[80%] px-3 py-2 rounded-lg ${m.author === "you" ? "bg-blue-600 text-white" : "bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 border border-gray-100 dark:border-gray-700"}`}>
-											<div
+											<div 
 												className={`text-sm whitespace-pre-wrap ${isExpanded ? 'max-h-[400px] overflow-y-auto pr-1 project-scrollbar' : ''}`}
 												style={isExpanded ? {
 													scrollbarWidth: 'thin',
@@ -464,83 +506,83 @@ const Chat = () => {
 													{isExpanded ? "Read Less" : "Read More"}
 												</button>
 											)}
-											<div className="text-[10px] opacity-60 text-right mt-1">
-												{new Date(m.time).toLocaleTimeString([], {
-													hour: "2-digit",
-													minute: "2-digit",
-												})}
-											</div>
+										<div className="text-[10px] opacity-60 text-right mt-1">
+											{new Date(m.time).toLocaleTimeString([], {
+												hour: "2-digit",
+												minute: "2-digit",
+											})}
+										</div>
 
 										</div>
 									</div>
 									{m.showProjects && (
 										<div className="mt-3 space-y-3 max-h-[500px] overflow-y-auto pr-2 project-scrollbar" style={{
-											scrollbarWidth: 'thin',
-											scrollbarColor: '#cbd5e1 transparent'
-										}}>
-											{PROJECTS.map((project) => (
-												<div
-													key={project.id}
-													className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow"
-												>
-													<div className="h-40 w-full overflow-hidden bg-gray-100 dark:bg-gray-700 flex items-center justify-center">
-														<Image
-															src={project.thumbnail}
-															alt={project.name}
-															className="w-full h-full object-cover"
-															onError={(e) => {
-																const parent = e.target.parentElement;
-																e.target.style.display = 'none';
-																if (!parent.querySelector('.fallback-text')) {
-																	const fallback = document.createElement('div');
-																	fallback.className = 'text-gray-600 dark:text-gray-300 font-bold text-lg fallback-text';
-																	fallback.textContent = project.name;
-																	parent.appendChild(fallback);
-																}
-															}}
-														/>
-													</div>
-													<div className="p-3">
-														<div className="flex items-start justify-between mb-2">
-															<div>
-																<h4 className="font-semibold text-sm text-gray-900 dark:text-gray-100">{project.title}</h4>
-																<p className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">{project.year}</p>
+												scrollbarWidth: 'thin',
+												scrollbarColor: '#cbd5e1 transparent'
+											}}>
+												{PROJECTS.map((project) => (
+													<div
+														key={project.id}
+														className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+													>
+														<div className="h-40 w-full overflow-hidden bg-gray-100 dark:bg-gray-700 flex items-center justify-center">
+															<Image
+																src={project.thumbnail} 
+																alt={project.name}
+																className="w-full h-full object-cover"
+																onError={(e) => {
+																	const parent = e.target.parentElement;
+																	e.target.style.display = 'none';
+																	if (!parent.querySelector('.fallback-text')) {
+																		const fallback = document.createElement('div');
+																		fallback.className = 'text-gray-600 dark:text-gray-300 font-bold text-lg fallback-text';
+																		fallback.textContent = project.name;
+																		parent.appendChild(fallback);
+																	}
+																}}
+															/>
+														</div>
+														<div className="p-3">
+															<div className="flex items-start justify-between mb-2">
+																<div>
+																	<h4 className="font-semibold text-sm text-gray-900 dark:text-gray-100">{project.title}</h4>
+																	<p className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">{project.year}</p>
+																</div>
 															</div>
+															<div className="max-h-32 overflow-y-auto mb-2 pr-1 project-scrollbar" style={{
+																scrollbarWidth: 'thin',
+																scrollbarColor: '#cbd5e1 transparent'
+															}}>
+																<p className="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">{project.description}</p>
+															</div>
+															<div className="flex flex-wrap gap-1 mb-2 max-h-20 overflow-y-auto pr-1 project-scrollbar" style={{
+																scrollbarWidth: 'thin',
+																scrollbarColor: '#cbd5e1 transparent'
+															}}>
+																{project.skills.map((skill, idx) => (
+																	<span
+																		key={idx}
+																		className="px-2 py-0.5 text-[10px] bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded whitespace-nowrap"
+																	>
+																		{skill}
+																	</span>
+																))}
+															</div>
+															<a
+																href={project.url}
+																target="_blank"
+																rel="noopener noreferrer"
+																className="inline-flex items-center gap-1 text-xs text-blue-600 dark:text-blue-400 hover:underline"
+															>
+																Visit Website
+																<svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+																	<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+																</svg>
+															</a>
 														</div>
-														<div className="max-h-32 overflow-y-auto mb-2 pr-1 project-scrollbar" style={{
-															scrollbarWidth: 'thin',
-															scrollbarColor: '#cbd5e1 transparent'
-														}}>
-															<p className="text-xs text-gray-600 dark:text-gray-300 leading-relaxed">{project.description}</p>
-														</div>
-														<div className="flex flex-wrap gap-1 mb-2 max-h-20 overflow-y-auto pr-1 project-scrollbar" style={{
-															scrollbarWidth: 'thin',
-															scrollbarColor: '#cbd5e1 transparent'
-														}}>
-															{project.skills.map((skill, idx) => (
-																<span
-																	key={idx}
-																	className="px-2 py-0.5 text-[10px] bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded whitespace-nowrap"
-																>
-																	{skill}
-																</span>
-															))}
-														</div>
-														<a
-															href={project.url}
-															target="_blank"
-															rel="noopener noreferrer"
-															className="inline-flex items-center gap-1 text-xs text-blue-600 dark:text-blue-400 hover:underline"
-														>
-															Visit Website
-															<svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-																<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-															</svg>
-														</a>
 													</div>
-												</div>
-											))}
-										</div>
+												))}
+											</div>
 									)}
 									{showReplies && quickReplies && (
 										<div className="mt-2 flex flex-wrap gap-2 justify-start">
@@ -549,10 +591,11 @@ const Chat = () => {
 													key={q.id}
 													onClick={() => handleQuickReply(q.id, q.text)}
 													disabled={clickedQuestions.has(q.id)}
-													className={`px-3 py-1.5 text-xs rounded-full border transition-all ${clickedQuestions.has(q.id)
-														? "bg-gray-200 dark:bg-gray-700 text-gray-500 dark:text-gray-400 border-gray-300 dark:border-gray-600 cursor-not-allowed"
-														: "bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 border-gray-300 dark:border-gray-600 hover:bg-blue-50 dark:hover:bg-gray-700 hover:border-blue-400 dark:hover:border-blue-500 cursor-pointer"
-														}`}
+													className={`px-3 py-1.5 text-xs rounded-full border transition-all ${
+														clickedQuestions.has(q.id)
+															? "bg-gray-200 dark:bg-gray-700 text-gray-500 dark:text-gray-400 border-gray-300 dark:border-gray-600 cursor-not-allowed"
+															: "bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 border-gray-300 dark:border-gray-600 hover:bg-blue-50 dark:hover:bg-gray-700 hover:border-blue-400 dark:hover:border-blue-500 cursor-pointer"
+													}`}
 												>
 													{q.text}
 												</button>
