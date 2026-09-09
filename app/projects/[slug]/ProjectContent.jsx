@@ -54,11 +54,11 @@ function ProjectContent({ data }) {
     if (!data) return null;
 
     return (
-        <div className="relative min-h-screen w-full gap-4 p-10 flex justify-center items-center flex-col mb-10 ">
+        <div className="relative min-h-screen w-full gap-4 p-10 flex justify-center items-center flex-col mb-10 bg-black text-white">
             <FixedButon href="/projects">
                 <FontAwesomeIcon
                     icon={faChevronLeft}
-                    className="text-black pr-10"
+                    className="text-white pr-10"
                 />
             </FixedButon>
             <ScrollDownButton />

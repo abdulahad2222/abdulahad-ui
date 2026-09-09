@@ -4,17 +4,13 @@ import React, { createContext, useState, useContext, useEffect } from "react";
 const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
-	const [isDark, setIsDark] = useState(false);
+	const [isDark, setIsDark] = useState(true);
 	const [isMounted, setIsMounted] = useState(false);
 
-	// Initialize theme from localStorage on mount
+	// Ensure dark mode is active
 	useEffect(() => {
-		const savedTheme = localStorage.getItem("theme");
-		const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-		const shouldBeDark = savedTheme ? savedTheme === "dark" : prefersDark;
-
-		setIsDark(shouldBeDark);
-		updateTheme(shouldBeDark);
+		setIsDark(true);
+		updateTheme(true);
 		setIsMounted(true);
 	}, []);
 

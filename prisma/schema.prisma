@@ -1,0 +1,165 @@
+// Prisma Schema for Abdul Ahad Portfolio Visitor Intelligence & Analytics
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Visitor {
+  id                String      @id @default(cuid())
+  visitorId         String      @unique // e.g. vis_xxxx-xxxx-xxxx
+  firstSeenAt       DateTime    @default(now())
+  lastSeenAt        DateTime    @default(now())
+  visitCount        Int         @default(1)
+  totalDuration     Int         @default(0) // in seconds
+  
+  // Device & Client properties
+  deviceType        String?     @default("desktop") // desktop, mobile, tablet
+  deviceVendor      String?
+  deviceModel       String?
+  browserName       String?
+  browserVersion    String?
+  osName            String?
+  osVersion         String?
+  screenResolution  String?     // e.g. 1920x1080
+  preferredLanguage String?
+  timeZone          String?
+  
+  // Geolocation
+  country           String?
+  countryCode       String?
+  region            String?
+  city              String?
+  latitude          Float?
+  longitude         Float?
+  isp               String?
+  
+  // Anonymized identifier for IP tracking
+  ipHash            String?
+  
+  // Relations
+  sessions          Session[]
+  pageViews         PageView[]
+  events            Event[]
+
+  @@index([visitorId])
+  @@index([lastSeenAt])
+  @@index([country])
+  @@index([deviceType])
+}
+
+model Session {
+  id                String      @id @default(cuid())
+  sessionId         String      @unique // e.g. sess_xxxx-xxxx-xxxx
+  visitorId         String
+  visitor           Visitor     @relation(fields: [visitorId], references: [visitorId], onDelete: Cascade)
+  
+  startedAt         DateTime    @default(now())
+  endedAt           DateTime?
+  lastActiveAt      DateTime    @default(now())
+  durationSeconds   Int         @default(0)
+  activeSeconds     Int         @default(0)
+  
+  landingPage       String      @default("/")
+  exitPage          String?
+  referrer          String?
+  referrerDomain    String?
+  
+  // UTM Parameters
+  utmSource         String?
+  utmMedium         String?
+  utmCampaign       String?
+  utmTerm           String?
+  utmContent        String?
+  
+  // Geolocation & Network snapshot for this session
+  ip                String?     // Server-derived IP (can be masked/anonymized in UI)
+  ipHash            String?
+  country           String?
+  countryCode       String?
+  region            String?
+  city              String?
+  latitude          Float?
+  longitude         Float?
+  isp               String?
+  
+  // Device snapshot
+  deviceType        String?
+  browserName       String?
+  osName            String?
+  
+  // Stats
+  pageCount         Int         @default(1)
+  eventCount        Int         @default(0)
+  isEngaged         Boolean     @default(false)
+  notifiedTelegram  Boolean     @default(false)
+  
+  // Relations
+  pageViews         PageView[]
+  events            Event[]
+
+  @@index([sessionId])
+  @@index([visitorId])
+  @@index([startedAt])
+  @@index([isEngaged])
+}
+
+model PageView {
+  id              String    @id @default(cuid())
+  sessionId       String
+  session         Session   @relation(fields: [sessionId], references: [sessionId], onDelete: Cascade)
+  visitorId       String
+  visitor         Visitor   @relation(fields: [visitorId], references: [visitorId], onDelete: Cascade)
+  
+  path            String
+  title           String?
+  referrer        String?
+  viewedAt        DateTime  @default(now())
+  durationSeconds Int       @default(0)
+  activeSeconds   Int       @default(0)
+  sequenceOrder   Int       @default(1)
+
+  @@index([sessionId])
+  @@index([visitorId])
+  @@index([path])
+  @@index([viewedAt])
+}
+
+model Event {
+  id            String    @id @default(cuid())
+  sessionId     String
+  session       Session   @relation(fields: [sessionId], references: [sessionId], onDelete: Cascade)
+  visitorId     String
+  visitor       Visitor   @relation(fields: [visitorId], references: [visitorId], onDelete: Cascade)
+  
+  eventType     String    // e.g. project_click, resume_download, contact_click, email_click, github_click
+  eventCategory String?   @default("interaction")
+  targetId      String?   // e.g. project slug or button id
+  targetUrl     String?
+  label         String?
+  metadata      String?   // JSON stringified payload
+  path          String    @default("/")
+  timestamp     DateTime  @default(now())
+
+  @@index([sessionId])
+  @@index([visitorId])
+  @@index([eventType])
+  @@index([timestamp])
+}
+
+model Admin {
+  id           String    @id @default(cuid())
+  email        String    @unique
+  passwordHash String
+  name         String?   @default("Abdul Ahad")
+  role         String    @default("admin")
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+  lastLoginAt  DateTime?
+
+  @@index([email])
+}

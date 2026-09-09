@@ -100,8 +100,8 @@ function SkillCard({ skill, isSelected, onClick }) {
 			onClick={onClick}
 			className={`relative z-10 cursor-pointer group p-6 rounded-2xl backdrop-blur-lg border transition-all duration-300 !outline-none
 ${isSelected
-					? "bg-white/25 dark:bg-white/10 border-white/40 shadow-2xl scale-105"
-					: "bg-white/10 dark:bg-black/40 border-white/10 opacity-70 hover:opacity-100"
+					? "bg-white/15 border-white/40 shadow-2xl scale-105"
+					: "bg-black/50 border-white/10 opacity-75 hover:opacity-100 hover:border-white/25"
 				}`}
 
 			whileHover={{
@@ -116,27 +116,26 @@ ${isSelected
 				stiffness: 300,
 				damping: 20,
 			}}>
-			{/* Glow effect - removed for selected state */}
 			{!isSelected && (
-				<div className="absolute inset-0 rounded-2xl transition-opacity duration-300 opacity-0 group-hover:opacity-50 bg-gradient-to-r from-gray-400/20 to-gray-600/20 blur-xl" />
+				<div className="absolute inset-0 rounded-2xl transition-opacity duration-300 opacity-0 group-hover:opacity-50 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 blur-xl" />
 			)}
 
 			<div className="relative z-10 flex flex-col items-center text-center space-y-4 ">
 				<div
 					className={`p-4 rounded-xl transition-all duration-300 
   ${isSelected
-							? "bg-white/50 dark:bg-white/20"
-							: "bg-white/20 dark:bg-black/40"
+							? "bg-white/20"
+							: "bg-white/5 border border-white/10"
 						}`}
 				>
 
-					<Icon className="w-8 h-8 dark:text-white text-black" />
+					<Icon className="w-8 h-8 text-white" />
 				</div>
 				<div>
-					<h3 className="font-semibold text-black dark:text-white text-lg mb-2">
+					<h3 className="font-semibold text-white text-lg mb-2">
 						{skill.title}
 					</h3>
-					<p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+					<p className="text-gray-300 text-sm leading-relaxed">
 						{skill.description}
 					</p>
 				</div>
@@ -152,15 +151,15 @@ function SkillDetails({ selectedSkill }) {
 		<motion.div
 			className="
     backdrop-blur-lg 
-    bg-white/20 dark:bg-black/40 
-    border-2 border-gray-300/30 dark:border-white/30  
+    bg-black/50 
+    border-2 border-white/20  
     rounded-2xl p-8 md:mt-10
   "
 			initial={{ opacity: 0, x: -50 }}
 			animate={{ opacity: 1, x: 0 }}
 			transition={{ delay: 0.2 }}
 		>
-			<h3 className="text-2xl font-semibold text-black dark:text-white mb-6 text-center">
+			<h3 className="text-2xl font-semibold text-white mb-6 text-center">
 				Languages & Frameworks
 			</h3>
 
@@ -174,11 +173,10 @@ function SkillDetails({ selectedSkill }) {
 						className="
           px-4 py-2 rounded-full font-medium cursor-default
           backdrop-blur-sm border transition-all
-          bg-gradient-to-r from-gray-200/60 to-white/40
-          dark:from-white/10 dark:to-white/5
-          border-gray-400/40 dark:border-white/10
-          text-black dark:text-white/90
-          hover:scale-105
+          bg-gradient-to-r from-white/10 to-white/5
+          border-white/15
+          text-white/90
+          hover:scale-105 hover:border-cyan-400/50
         "
 					>
 						{lang}
@@ -200,10 +198,10 @@ export default function Skills() {
 					whileInView={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.6 }}
 					className="text-center space-y-4 mb-16">
-					<h2 className="text-5xl font-bold bg-gradient-to-r from-black to-gray-600 bg-clip-text  dark:text-white text-transparent">
+					<h2 className="text-5xl font-bold bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent">
 						Skills & Expertise
 					</h2>
-					<p className="dark:gray-200 text-gray-600 max-w-2xl mx-auto text-lg leading-relaxed">
+					<p className="text-gray-300 max-w-2xl mx-auto text-lg leading-relaxed">
 						Explore my technical skills across different domains. Click on any
 						category to see the specific technologies and tools I work with.
 					</p>

@@ -123,9 +123,7 @@ export default function ProjectCard({ project, index, activeCategory, theme = "f
 			{project.category.includes(parseInt(activeCategory)) && (
 				<Link href={"projects/" + project.slug} key={index}>
 					<motion.div
-						className={`z-10 relative flex justify-center items-start flex-col mb-5 md:px-10 w-full h-auto bg-gradient-to-br from-gray-200 to-gray-300 dark:from-gray-800 
-							dark:to-gray-900 group/card py-20 px-5 md:py-2 aspect-video rounded-2xl shadow-lg 
-							dark:shadow-2xl hover:shadow-2xl ${colors.shadow} overflow-hidden border ${colors.border} transition-all duration-300`}
+						className={`z-10 relative flex justify-center items-start flex-col mb-5 md:px-10 w-full h-auto bg-gradient-to-br from-gray-900 to-black group/card py-20 px-5 md:py-2 aspect-video rounded-2xl shadow-2xl hover:shadow-2xl ${colors.shadow} overflow-hidden border ${colors.border} transition-all duration-300`}
 						initial={{
 							opacity: 0,
 							x: -200,
@@ -143,7 +141,7 @@ export default function ProjectCard({ project, index, activeCategory, theme = "f
 							layout="fill"
 							objectFit="cover"
 							placeholder="blur"
-							className="bg-slate-950 opacity-15 group-hover/card:opacity-100 transition-all ease duration-500"
+							className="bg-slate-950 opacity-20 group-hover/card:opacity-100 transition-all ease duration-500"
 							blurDataURL={BlurImage.src}
 						/>
 						<div className="absolute top-0 left-0 z-20">
@@ -172,8 +170,8 @@ export default function ProjectCard({ project, index, activeCategory, theme = "f
 </div>
 
 						<div className="transition-all ease duration-500 opacity-100 content text-center group-hover/card:opacity-0 z-10">
-							<h1 className="text-3xl font-bold mb-3 text-black dark:text-white drop-shadow-lg">{project.title}</h1>
-							<p className="text-gray-700 dark:text-gray-300 drop-shadow">
+							<h1 className="text-3xl font-bold mb-3 text-white drop-shadow-lg">{project.title}</h1>
+							<p className="text-gray-300 drop-shadow">
 								{project.desc[0].length > 125
 									? `${project.desc[0].slice(0, 125)}...`
 									: project.desc[0]}

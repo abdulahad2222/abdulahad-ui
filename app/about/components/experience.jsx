@@ -174,33 +174,32 @@ function ExperienceCard({ experience, index, isEven }) {
 			{/* Card */}
 			<div
 				className="
-          bg-white/20 dark:bg-black/40
+          bg-black/50
           backdrop-blur-sm
-          border border-gray-300/30 dark:border-white/20
+          border border-white/20
           rounded-2xl p-6
-          shadow-lg dark:shadow-[0_0_25px_rgba(255,255,255,0.04)]
-          hover:shadow-xl
-          hover:bg-white/30 dark:hover:bg-black/50
+          shadow-2xl
+          hover:bg-black/60
           transition-all duration-300
           ml-12 md:ml-0
         "
 			>
 				{/* Company & Position */}
 				<div className="mb-4">
-					<h3 className="font-bold text-xl text-black dark:text-white mb-1">
+					<h3 className="font-bold text-xl text-white mb-1">
 						{experience.company}
 					</h3>
 
-					<h4 className="font-medium text-lg text-gray-700 dark:text-gray-200">
+					<h4 className="font-medium text-lg text-gray-200">
 						{experience.position}
-						<span className="text-sm font-normal text-gray-500 dark:text-gray-400 ml-2">
+						<span className="text-sm font-normal text-gray-400 ml-2">
 							• {experience.type}
 						</span>
 					</h4>
 				</div>
 
 				{/* Description */}
-				<p className="text-gray-600 dark:text-gray-300 text-justify leading-relaxed mb-4">
+				<p className="text-gray-300 text-justify leading-relaxed mb-4">
 					{experience.description}
 				</p>
 
@@ -213,11 +212,11 @@ function ExperienceCard({ experience, index, isEven }) {
                 px-3 py-1 rounded-full text-sm font-medium
                 backdrop-blur-sm border
                 transition-all duration-300
-                bg-gray-200/60 dark:bg-white/10
-                hover:bg-gray-300/60 dark:hover:bg-white/20
-                border-gray-400/40 dark:border-white/10
-                text-black dark:text-white/90
-                hover:scale-105
+                bg-white/10
+                hover:bg-white/20
+                border-white/15
+                text-white/90
+                hover:scale-105 hover:border-cyan-400/50
               "
 						>
 							{skill}

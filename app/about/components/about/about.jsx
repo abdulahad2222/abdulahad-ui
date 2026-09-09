@@ -107,48 +107,48 @@ export default function About() {
 
 						type: "spring",
 					}}>
-					<h2 className="text-2xl font-bold tracking-wider mb-3">
+					<h2 className="text-2xl font-bold tracking-wider mb-3 text-white">
 						Abdul Ahad
 					</h2>
-					<p className="dark:text-gray-400 text-gray-600 text-justify title text-lg">
+					<p className="text-gray-300 text-justify title text-lg leading-relaxed">
 						Hey there, I’m Abdul Ahad, a
-						<span className="dark:text-white text-black font-medium">
+						<span className="text-white font-semibold">
 							{" "}passionate Front-End Developer
 						</span>{" "}
 						with around
-						<span className="dark:text-white text-black font-medium">
+						<span className="text-white font-semibold">
 							{" "}3+ years of professional experience
 						</span>{" "}
 						in building modern, responsive, and user-friendly web applications.
 						Based in
-						<span className="dark:text-white text-black font-medium">
+						<span className="text-white font-semibold">
 							{" "}Lucknow, India,
 						</span>{" "}
 						I currently work at
-						<span className="dark:text-white text-black font-medium">
+						<span className="text-white font-semibold">
 							{" "}Next Olive Technologies Pvt Ltd,
 						</span>{" "}
 						where I focus on creating scalable UI solutions using
-						<span className="dark:text-white text-black font-medium">
+						<span className="text-white font-semibold">
 							{" "}React, Next.js, Tailwind CSS, Bootstrap, Material UI, Ant Design,
 							ShadCN UI, and Framer Motion
 						</span>{" "}
 						alongside modern front-end and ecosystem tools.
 						<br /><br />
 						My technical expertise also includes working with
-						<span className="dark:text-white text-black font-medium">
+						<span className="text-white font-semibold">
 							{" "}Headless CMS platforms
 						</span>{" "}
 						such as
-						<span className="dark:text-white text-black font-medium">
+						<span className="text-white font-semibold">
 							{" "}Strapi, Sanity, and Contentful,
 						</span>{" "}
 						as well as state management and data-handling solutions like
-						<span className="dark:text-white text-black font-medium">
+						<span className="text-white font-semibold">
 							{" "}Redux Toolkit, Zustand, React Query,
 						</span>{" "}
 						and API integrations using
-						<span className="dark:text-white text-black font-medium">
+						<span className="text-white font-semibold">
 							{" "}REST APIs, Axios, and Fetch.
 						</span>{" "}
 						<br /><br />
@@ -156,13 +156,13 @@ export default function About() {
 						responsive websites, admin panels, and highly interactive components with a
 						strong emphasis on performance, scalability, and UX. Alongside front-end
 						development, I have a growing interest in
-						<span className="dark:text-white text-black font-medium">
+						<span className="text-white font-semibold">
 							{" "}AI-powered web experiences
 						</span>{" "}
 						and continuously explore emerging technologies, design systems, and web
 						performance optimization techniques.
 						In today’s fast-evolving digital world, I strongly believe being a
-						<span className="dark:text-white text-black font-medium"> lifelong learner</span> is key to
+						<span className="text-white font-semibold"> lifelong learner</span> is key to
 						growth. Let’s build something impactful together!
 					</p>
 

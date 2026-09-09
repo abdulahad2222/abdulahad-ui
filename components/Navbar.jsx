@@ -202,21 +202,20 @@ const Navbar = () => {
 				ref={navRef}
 				className={`navbar px-5 md:px-24 w-screen fixed transition-all ease duration-500 ${
 					isNavOpen
-						? "backdrop-filter backdrop-blur-xl bg-gradient-to-r from-blue-600/80 to-purple-600/80 dark:from-blue-900/90 dark:to-purple-900/90 bg-opacity-50 dark:bg-opacity-80 shadow-lg"
-						: "backdrop-filter backdrop-blur-md bg-gradient-to-r from-white/80 to-gray-100/80 dark:from-gray-950/80 dark:to-gray-900/80 bg-opacity-80 dark:bg-opacity-60 border-b border-blue-200 dark:border-blue-900/30"
+						? "backdrop-filter backdrop-blur-xl bg-gradient-to-r from-blue-900/90 to-purple-900/90 shadow-2xl"
+						: "backdrop-filter backdrop-blur-md bg-gray-950/85 border-b border-gray-800/80 shadow-lg"
 				} inset-0 flex flex-row justify-between items-center h-16 z-50 `}>
 				<div>
 					<h1
 						className={`text-2xl ml-2 md:ml-0 font-bold transition-colors ease duration-500 bg-gradient-to-r ${
 							isNavOpen
 								? "from-white to-blue-100 bg-clip-text text-transparent"
-								: "from-blue-600 to-purple-600 dark:text-white bg-clip-text text-transparent"
+								: "from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent"
 						}`}>
 						 Abdul Ahad 
 					</h1>
 				</div>
 				<div className="flex flex-row items-center gap-4">
-					{/* <ThemeToggle /> */}
 					<button
 						className="burger button flex flex-col justify-center items-center space-y-1.5 "
 						onClick={toggleNav}>
@@ -224,13 +223,13 @@ const Navbar = () => {
 							className={`w-10 h-1 rounded-full transition-all ease duration-300 ${
 								isNavOpen
 									? "rotate-45 bg-white translate-y-[2px]"
-									: "bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400"
+									: "bg-gradient-to-r from-cyan-400 to-blue-500"
 							}`}></div>
 						<div
 							className={`w-10 h-1 rounded-full transition-all ease duration-300 ${
 								isNavOpen
 									? "-rotate-45 -translate-y-2 bg-white"
-									: "bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-400 dark:to-pink-400"
+									: "bg-gradient-to-r from-purple-500 to-pink-500"
 							}`}></div>
 					</button>
 				</div>

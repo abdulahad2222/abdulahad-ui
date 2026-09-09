@@ -16,6 +16,7 @@ import MeAbout from "@/public/image/me2.jpg";
 import Setup from "@/public/image/setup.jpg";
 import ProjectAll from "@/public/image/projects.png";
 import Hr from "@/components/Hr";
+import { trackEvent } from "@/lib/analytics-client";
 // icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
@@ -38,7 +39,7 @@ const MyPage = () => {
 			<ReactFullpage
 				render={({ state, fullpageApi }) => (
 					<ReactFullpage.Wrapper>
-						<div className="section bg-gradient-to-b from-gray-50 to-white dark:bg-black dark:bg-gradient-to-b dark:from-black dark:to-gray-900">
+						<div className="section bg-gradient-to-b from-black via-gray-950 to-neutral-900 text-white">
 							<div className="mx-auto container grid grid-cols-1 md:grid-cols-3 gap-4 p-10 overflow-hidden md:px-20 relative z-10">
 								<motion.div
 									className="col-span-2 flex flex-col justify-center items-center md:items-start text-center md:text-start"
@@ -48,7 +49,7 @@ const MyPage = () => {
 										type: "spring",
 									}}>
 									<div className="block md:hidden col-span-1 mx-auto my-10">
-										<div className="bg-gradient-to-br from-gray-200 to-gray-300 dark:from-gray-800 dark:to-gray-900 rounded-full h-60 w-60 grayscale hover:grayscale-0 transition-all ease duration-300 shadow-lg dark:shadow-xl">
+										<div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-full h-60 w-60 grayscale hover:grayscale-0 transition-all ease duration-300 shadow-xl border border-gray-800">
 											<Image
 												src={Me}
 												width={500}
@@ -60,7 +61,7 @@ const MyPage = () => {
 										</div>
 									</div>
 									<motion.h3
-										className="uppercase text-xl mb-3 font-normal text tracking-[.5rem] text-gray-500 dark:text-gray-400"
+										className="uppercase text-xl mb-3 font-normal text tracking-[.5rem] text-gray-400"
 										initial={{ x: -100, opacity: 0 }}
 										whileInView={{ x: 0, opacity: 1 }}
 										transition={{
@@ -70,7 +71,7 @@ const MyPage = () => {
 										Abdul Ahad
 									</motion.h3>
 									<motion.h1
-										className="text-black dark:text-white text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl font-bold my-2 md:my-5"
+										className="text-white text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl font-bold my-2 md:my-5"
 										initial={{ x: -100, opacity: 0 }}
 										whileInView={{ x: 0, opacity: 1 }}
 										transition={{
@@ -80,7 +81,7 @@ const MyPage = () => {
 										Front-end Developer
 									</motion.h1>
 									<motion.p
-										className="title text-md  2xl:text-xl mt-4 tracking-wider text-gray-600 dark:text-gray-300 leading-[1.7rem]"
+										className="title text-md 2xl:text-xl mt-4 tracking-wider text-gray-300 leading-[1.7rem]"
 										initial={{ x: -100, opacity: 0 }}
 										whileInView={{ x: 0, opacity: 1 }}
 										transition={{
@@ -105,12 +106,29 @@ const MyPage = () => {
 												href={"/docs/cv.pdf"}
 												target="_blank"
 												rel="noopener noreferrer"
+												onClick={() => {
+													trackEvent(
+														"resume_download",
+														{ source: "hero_section" },
+														{ label: "Download CV" }
+													);
+												}}
 												download>
 												Download CV
 											</Link>
 										</Button>
 										<Button variation="secondary" theme="blue">
-											<a href="#contact">Contact Me</a>
+											<a
+												href="#contact"
+												onClick={() => {
+													trackEvent(
+														"contact_click",
+														{ source: "hero_section" },
+														{ label: "Contact Me" }
+													);
+												}}>
+												Contact Me
+											</a>
 										</Button>
 									</motion.div>
 								</motion.div>
@@ -135,11 +153,11 @@ const MyPage = () => {
 								</motion.div>
 							</div>
 						</div>
-						<div className="section bg-gradient-to-b from-white to-gray-50 dark:bg-black dark:bg-gradient-to-b dark:from-black dark:to-gray-900">
-							<div className="relative md:h-screen w-screen gap-4 flex justify-center items-center flex-col overflow-hidden dark:bg-black dark:bg-gradient-to-b dark:from-black dark:to-gray-900">
+						<div className="section bg-gradient-to-b from-neutral-900 via-gray-950 to-black text-white">
+							<div className="relative md:h-screen w-screen gap-4 flex justify-center items-center flex-col overflow-hidden bg-transparent">
 								<div className="z-0 mb-48 md:mb-0  md:absolute top-1/4  md:right-[10%] md:-translate-y-16 ">
 									<motion.div
-										className="bg-gradient-to-br from-gray-300 to-gray-400 dark:from-gray-700 dark:to-gray-800 rounded-sm h-[400px] md:h-[600px] w-[80vw] md:w-[30vw] grayscale hover:grayscale-0 shadow-2xl dark:shadow-2xl"
+										className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-sm h-[400px] md:h-[600px] w-[80vw] md:w-[30vw] grayscale hover:grayscale-0 shadow-2xl border border-gray-800"
 										initial={{
 											x: 300,
 											opacity: 0,
@@ -167,7 +185,7 @@ const MyPage = () => {
 								</div>
 								<div className="z-10 w-full absolute md:w-auto  md:left-[10%] top-[60%] md:top-1/3 col-span-2 flex flex-col justify-center items-start md:items-start text-start px-10 py-5">
 									<motion.h1
-										className="bg-white/50 dark:bg-gray-900/40 lg:bg-transparent dark:lg:bg-transparent px-3 md:px-0 text-black dark:text-white text-5xl md:text-8xl font-bold"
+										className="bg-transparent px-3 md:px-0 text-white text-5xl md:text-8xl font-bold"
 										initial={{ x: -100, opacity: 0 }}
 										whileInView={{ x: 0, opacity: 1 }}
 										transition={{
@@ -179,7 +197,7 @@ const MyPage = () => {
 									<Hr theme="purple" />
 									<div className="max-w-2xl">
 									<motion.p
-										className="title  text-xl mt-4 tracking-wider text-gray-700 dark:text-gray-300 leading-[1.7rem] mb-5 word-wrap"
+										className="title  text-xl mt-4 tracking-wider text-gray-300 leading-[1.7rem] mb-5 word-wrap"
 										initial={{ x: -100, opacity: 0 }}
 										whileInView={{ x: 0, opacity: 1 }}
 										transition={{
@@ -204,11 +222,11 @@ const MyPage = () => {
 								</div>
 							</div>
 						</div>
-						<div className="section bg-gradient-to-b from-gray-50 to-white dark:bg-black dark:bg-gradient-to-b dark:from-black dark:to-gray-900">
+						<div className="section bg-gradient-to-b from-black via-gray-950 to-neutral-900 text-white">
 							<div className="relative md:h-screen w-screen gap-4 p-10 flex justify-center items-center flex-col overflow-hidden">
 								<div className="z-0 mb-48 md:mb-0  md:absolute top-1/4  md:right-[10%] md:-translate-y-16 ">
 									<motion.div
-										className="bg-gradient-to-br from-gray-300 to-gray-400 dark:from-gray-700 dark:to-gray-800 rounded-sm h-[400px] md:h-[600px] w-[80vw] md:w-[30vw] grayscale hover:grayscale-0 shadow-2xl dark:shadow-2xl"
+										className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-sm h-[400px] md:h-[600px] w-[80vw] md:w-[30vw] grayscale hover:grayscale-0 shadow-2xl border border-gray-800"
 										initial={{
 											x: 300,
 											opacity: 0,
@@ -236,7 +254,7 @@ const MyPage = () => {
 								</div>
 								<div className="z-10 w-full absolute md:w-auto  md:left-[10%] top-[60%] md:top-1/3 col-span-2 flex flex-col justify-center items-start md:items-start text-start px-10 py-5">
 									<motion.h1
-										className="bg-white/50 dark:bg-gray-900/40 lg:bg-transparent dark:lg:bg-transparent px-3 md:px-0 text-black dark:text-white text-5xl md:text-8xl font-bold"
+										className="bg-transparent px-3 md:px-0 text-white text-5xl md:text-8xl font-bold"
 										initial={{ x: -100, opacity: 0 }}
 										whileInView={{ x: 0, opacity: 1 }}
 										transition={{
@@ -248,7 +266,7 @@ const MyPage = () => {
 									<Hr theme="cyan" />
 										<div className="max-w-2xl">
 									<motion.p
-										className="title  text-xl mt-4 tracking-wider text-gray-700 dark:text-gray-300 leading-[1.7rem] mb-5"
+										className="title  text-xl mt-4 tracking-wider text-gray-300 leading-[1.7rem] mb-5"
 										initial={{ x: -100, opacity: 0 }}
 										whileInView={{ x: 0, opacity: 1 }}
 										transition={{
@@ -272,11 +290,11 @@ const MyPage = () => {
 								</div>
 							</div>
 						</div>
-						<div className="section bg-gradient-to-b from-white to-gray-50 dark:bg-black dark:bg-gradient-to-b dark:from-black dark:to-gray-900">
+						<div className="section bg-gradient-to-b from-neutral-900 via-gray-950 to-black text-white">
 							<div className="relative md:h-screen w-screen  gap-4 p-10 flex justify-center items-center flex-col overflow-hidden">
 								<div className="z-0 mb-48 md:mb-0  md:absolute top-1/4  md:right-[10%] md:-translate-y-16 ">
 									<motion.div
-										className="bg-gradient-to-br from-gray-300 to-gray-400 dark:from-gray-700 dark:to-gray-800 rounded-sm h-[400px] md:h-[600px] w-[80vw] md:w-[30vw] grayscale hover:grayscale-0 shadow-2xl dark:shadow-2xl"
+										className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-sm h-[400px] md:h-[600px] w-[80vw] md:w-[30vw] grayscale hover:grayscale-0 shadow-2xl border border-gray-800"
 										initial={{
 											x: 300,
 											opacity: 0,
@@ -304,7 +322,7 @@ const MyPage = () => {
 								</div>
 								<div className="z-10 w-full absolute md:w-auto  md:left-[10%] top-[60%] md:top-1/3 col-span-2 flex flex-col justify-center items-start md:items-start text-start px-10 overflow-hidden">
 									<motion.h1
-										className="bg-white/50 dark:bg-gray-900/40 lg:bg-transparent dark:lg:bg-transparent px-3 md:px-0 text-black dark:text-white text-5xl md:text-8xl font-bold mb-3"
+										className="bg-transparent px-3 md:px-0 text-white text-5xl md:text-8xl font-bold mb-3"
 										initial={{ x: -100, opacity: 0 }}
 										whileInView={{ x: 0, opacity: 1 }}
 										transition={{
@@ -316,7 +334,7 @@ const MyPage = () => {
 									<Hr theme="pink" />
 									<div className="max-w-2xl">
 									<motion.p
-										className="title text-xl mt-4 tracking-wider text-gray-700 dark:text-gray-300 leading-[1.7rem] md:mb-5"
+										className="title text-xl mt-4 tracking-wider text-gray-300 leading-[1.7rem] md:mb-5"
 										initial={{ x: -100, opacity: 0 }}
 										whileInView={{ x: 0, opacity: 1 }}
 										transition={{
@@ -349,7 +367,14 @@ const MyPage = () => {
 												opacity: { delay: 0.2 },
 											}}
 											initial={{ opacity: 0, y: 40 }}
-											whileInView={{ opacity: 1, y: 0 }}>
+											whileInView={{ opacity: 1, y: 0 }}
+											onClick={() => {
+												trackEvent(
+													"email_click",
+													{ email: "abdulahad020007@gmail.com" },
+													{ label: "Email Contact Button" }
+												);
+											}}>
 											<FontAwesomeIcon icon={faEnvelope} className="text-3xl" />
 										</motion.a>
 
@@ -360,6 +385,13 @@ const MyPage = () => {
 										className="flex justify-center items-center bg-gray-800 dark:bg-gray-700 w-14 h-14 rounded-full text-white hover:bg-gray-900 dark:hover:bg-gray-600 shadow-lg hover:shadow-xl transition-all ease-in-out duration-300 transform hover:scale-110"
 											initial={{ opacity: 0, y: 40 }}
 											whileInView={{ opacity: 1, y: 0 }}
+											onClick={() => {
+												trackEvent(
+													"github_click",
+													{ url: "https://github.com/abdulahad66" },
+													{ label: "GitHub Profile Link" }
+												);
+											}}
 											transition={{
 												y: { delay: 0.2 },
 												opacity: { delay: 0.3 },
@@ -389,6 +421,13 @@ const MyPage = () => {
 										className="flex justify-center items-center bg-blue-700 dark:bg-blue-800 w-14 h-14 rounded-full text-white hover:bg-blue-800 dark:hover:bg-blue-900 shadow-lg hover:shadow-xl transition-all ease-in-out duration-300 transform hover:scale-110"
 											initial={{ opacity: 0, y: 40 }}
 											whileInView={{ opacity: 1, y: 0 }}
+											onClick={() => {
+												trackEvent(
+													"linkedin_click",
+													{ url: "https://www.linkedin.com/in/abdulahad-dev/" },
+													{ label: "LinkedIn Profile Link" }
+												);
+											}}
 											transition={{
 												y: { delay: 0.4 },
 												opacity: { delay: 0.5 },

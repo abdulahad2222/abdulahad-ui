@@ -34,17 +34,17 @@ export default function Page() {
 	}, []);
 	return (
 		<>
-			<main className="overflow-hidden">
+			<main className="overflow-hidden bg-black text-white">
 				<FixedButton href="/#projects">
-					<FontAwesomeIcon icon={faChevronLeft} className="text-black dark:text-white pr-10" />
+					<FontAwesomeIcon icon={faChevronLeft} className="text-white pr-10" />
 				</FixedButton>
-				<div className="relative h-screen w-screen  gap-4 p-10 flex justify-center items-center flex-col mb-10 overflow-hidden bg-gradient-to-b from-white to-gray-50 dark:from-black dark:to-gray-950">
+				<div className="relative h-screen w-screen  gap-4 p-10 flex justify-center items-center flex-col mb-10 overflow-hidden bg-gradient-to-b from-black via-gray-950 to-neutral-950">
 					<div className="z-0 mb-48 md:mb-0  md:absolute top-1/4  md:right-[10%] md:-translate-y-16 ">
 						<motion.div
 							initial={{ scale: 1 }}
 							animate={{ scale: 1.6 }}
 							transition={{ duration: 1, ease: "circOut" }}
-							className="bg-gradient-to-br from-gray-300 to-gray-400 dark:from-gray-700 dark:to-gray-800 rounded-sm h-[400px] md:h-[600px] w-[80vw] md:w-[30vw] grayscale hover:grayscale-0 shadow-2xl dark:shadow-2xl">
+							className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-sm h-[400px] md:h-[600px] w-[80vw] md:w-[30vw] grayscale hover:grayscale-0 shadow-2xl border border-gray-800">
 							<Image
 								src={ProjectAll}
 								alt="Abdul Ahad"
@@ -54,14 +54,14 @@ export default function Page() {
 							/>
 						</motion.div>
 					</div>
-					<div className="z-10 w-full absolute md:w-auto md:left-[10%] top-[60%] md:top-1/3 col-span-2 flex flex-col justify-center items-start md:items-start text-start px-10 pt-4 backdrop-filter backdrop-blur-sm md:backdrop-blur-none md:backdrop-filter-none bg-white/50 dark:bg-gray-900/40 md:bg-transparent md:pt-0 rounded-lg md:rounded-none">
-						<h1 className="md:bg-white dark:md:bg-transparent bg-transparent lg:bg-transparent dark:lg:bg-transparent bg-opacity-50 dark:bg-opacity-50 md:px-0 text-black dark:text-white text-5xl md:text-8xl font-bold">
+					<div className="z-10 w-full absolute md:w-auto md:left-[10%] top-[60%] md:top-1/3 col-span-2 flex flex-col justify-center items-start md:items-start text-start px-10 pt-4 backdrop-filter backdrop-blur-sm md:backdrop-blur-none bg-gray-950/60 md:bg-transparent md:pt-0 rounded-lg md:rounded-none">
+						<h1 className="bg-transparent md:px-0 text-white text-5xl md:text-8xl font-bold">
 							My Projects
 						</h1>
 						<Hr theme="cyan" />
-						<p className="title  text-xl mt-4 tracking-wider text-gray-900 dark:text-gray-300 leading-[1.7rem] mb-5">
+						<p className="title  text-xl mt-4 tracking-wider text-gray-300 leading-[1.7rem] mb-5">
 							List of my projects that I have done and{" "}
-							<span className="bg-transparent md:bg-gray-100 dark:md:bg-gray-900/40 bg-opacity-50 dark:bg-opacity-50 xl:bg-transparent">
+							<span className="bg-transparent text-cyan-400">
 								{" "}
 								currently working on.
 							</span>
@@ -84,7 +84,7 @@ export default function Page() {
 				<div className="mt-10 flex flex-col justify-start items-center w-full pl-10 md:pl-32">
 					<div className="flex justify-center items-center flex-col my-5 self-start ">
 						<Hr variant="long" theme="cyan"></Hr>
-						<h1 className="text-3xl font-bold mt-3 text-black dark:text-white">Hightlight</h1>
+						<h1 className="text-3xl font-bold mt-3 text-white">Hightlight</h1>
 					</div>
 				</div>
 				<div className="relative w-screen mx-auto container gap-4 px-10 grid grid-cols-1 md:grid-cols-2 mb-10">

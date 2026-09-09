@@ -25,38 +25,38 @@ export default function Page() {
 
 	return (
 		<>
-			<main className="overflow-hidden">
+			<main className="overflow-hidden bg-black text-white">
 				<FixedButton href="/#about">
 					<FontAwesomeIcon
 						icon={faChevronLeft}
-						className="text-black dark:text-white pr-10"
+						className="text-white pr-10"
 					/>
 				</FixedButton>
-				<div className="relative h-screen  gap-4 p-10 flex justify-center items-center flex-col mb-10 overflow-hidden bg-gradient-to-b from-gray-50 to-white dark:from-gray-950 dark:to-black">
+				<div className="relative h-screen gap-4 p-10 flex justify-center items-center flex-col mb-10 overflow-hidden bg-gradient-to-b from-black via-gray-950 to-neutral-950">
 					{/* hero */}
 					<div className="z-0 mb-48 md:mb-0  md:absolute top-1/4  md:right-[10%] md:-translate-y-16 ">
 						<motion.div
 							initial={{ scale: 1 }}
 							animate={{ scale: 1.6 }}
 							transition={{ ease: "circOut", duration: 1 }}
-							className="bg-gradient-to-br from-gray-300 to-gray-400 dark:from-gray-700 dark:to-gray-800 rounded-sm h-[400px] md:h-[600px] w-[80vw] md:w-[30vw] grayscale hover:grayscale-0 shadow-2xl dark:shadow-2xl">
+							className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-sm h-[400px] md:h-[600px] w-[80vw] md:w-[30vw] grayscale hover:grayscale-0 shadow-2xl border border-gray-800">
 							<Image
 								src={Hero}
-								alt="Alvalen Shafel"
+								alt="Abdul Ahad"
 								layout="fill"
 								objectFit="cover"
 								placeholder="blur"
 							/>
 						</motion.div>
 					</div>
-					<div className="z-10 w-full absolute md:w-auto md:left-[10%] top-[60%] md:top-1/3 col-span-2 flex flex-col justify-center items-start md:items-start text-start px-10 pt-4 backdrop-filter backdrop-blur-sm md:backdrop-blur-none bg-white/50 dark:bg-gray-900/30 md:bg-transparent md:pt-0 rounded-lg md:rounded-none">
-						<h1 className="md:bg-white dark:md:bg-transparent bg-transparent lg:bg-transparent bg-opacity-50 md:px-0 text-black dark:text-white text-5xl md:text-8xl font-bold">
+					<div className="z-10 w-full absolute md:w-auto md:left-[10%] top-[60%] md:top-1/3 col-span-2 flex flex-col justify-center items-start md:items-start text-start px-10 pt-4 backdrop-filter backdrop-blur-sm md:backdrop-blur-none bg-gray-950/60 md:bg-transparent md:pt-0 rounded-lg md:rounded-none">
+						<h1 className="bg-transparent md:px-0 text-white text-5xl md:text-8xl font-bold">
 							About Me
 						</h1>
 						<Hr theme="purple" />
-						<p className="title text-xl mt-4 tracking-wider text-gray-900 dark:text-gray-300 leading-[1.7rem] mb-5 ">
+						<p className="title text-xl mt-4 tracking-wider text-gray-300 leading-[1.7rem] mb-5 ">
 							A brief introduction about me and{" "}
-							<span className="bg-transparent md:bg-gray-100 dark:md:bg-transparent bg-opacity-50 xl:bg-transparent">
+							<span className="bg-transparent text-cyan-400">
 								{" "}
 								my interest.
 							</span>

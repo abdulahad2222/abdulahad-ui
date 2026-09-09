@@ -222,14 +222,14 @@ export default function Education() {
 								</div>
 							</div>
 							<div className="flex items-center gap-2">
-							<p className="text-gray-600 dark:text-gray-300 text-justify title text-lg">
+							<p className="text-gray-300 text-justify title text-lg">
 								Aspiring to grow as a professional Software Engineer, I am currently
 								pursuing my
-								<span className="text-black dark:text-white font-medium">
+								<span className="text-white font-semibold">
 										{" "}Master of Computer Applications (MCA)
 									</span>{" "}
 									from
-									<span className="text-black font-medium dark:text-gray-400">
+									<span className="text-gray-200 font-medium">
 										{" "}Indian School of Business Management and Administration (ISBM),
 										Chhattisgarh
 									</span>
@@ -238,11 +238,11 @@ export default function Education() {
 									<br />
 									<br />
 									I have completed my
-									<span className="text-black font-medium dark:text-gray-400">
+									<span className="text-white font-semibold">
 										{" "}Bachelor of Computer Applications (BCA)
 									</span>{" "}
 									from
-									<span className="text-black font-medium dark:text-gray-400">
+									<span className="text-gray-200 font-medium">
 										{" "}Chhatrapati Shahu Ji Maharaj University (CSJMU), Kanpur
 									</span>
 									, which provided me with a strong foundation in programming fundamentals,
@@ -250,7 +250,7 @@ export default function Education() {
 									<br />
 									<br />
 									With a strong interest in
-									<span className="text-black font-medium dark:text-gray-400">
+									<span className="text-cyan-400 font-semibold">
 										{" "}Front-End Development
 									</span>{" "}
 									and scalable UI systems, I continuously apply my academic learning to
@@ -260,16 +260,16 @@ export default function Education() {
 							</div>
 
 							<div className="flex flex-wrap gap-2 mt-4 text-sm">
-								<div className="bg-gray-300 text-black px-3 py-1 rounded-2xl">
+								<div className="bg-gray-800 text-white px-3 py-1 rounded-2xl border border-gray-700">
 									MCA (Ongoing)
 								</div>
-								<div className="bg-gray-300 text-black px-3 py-1 rounded-2xl">
+								<div className="bg-gray-800 text-white px-3 py-1 rounded-2xl border border-gray-700">
 									BCA Graduate
 								</div>
 							</div>
 
 							<div className="flex flex-wrap gap-2 mt-4 text-sm">
-								<div className="bg-gray-300 text-black px-2 py-1 rounded-2xl">
+								<div className="bg-gray-800 text-cyan-300 px-3 py-1 rounded-2xl border border-gray-700">
 									GPA: 3.9 out of 4
 								</div>
 							</div>
@@ -325,15 +325,14 @@ export default function Education() {
   {/* Achievement Card */}
   <div
     className="
-      bg-white/20 dark:bg-black/40
+      bg-black/50
       backdrop-blur-md
-      border border-white/30 dark:border-white/10
+      border border-white/15
       rounded-2xl p-4
-      shadow-lg dark:shadow-[0_0_25px_rgba(255,255,255,0.04)]
-      hover:bg-white/30 dark:hover:bg-black/50
+      shadow-2xl
+      hover:bg-black/60
       transition-all duration-300
       hover:shadow-xl
-       hover:grayscale-0
     "
   >
     <div className="flex items-center gap-4">
@@ -354,15 +353,15 @@ export default function Education() {
 
       {/* Content */}
       <div>
-        <h3 className="font-medium text-black dark:text-white">
+        <h3 className="font-medium text-white">
           {achievement.title}
         </h3>
 
-        <p className="text-sm text-gray-700 dark:text-gray-300">
+        <p className="text-sm text-gray-300">
           {achievement.subtitle}
         </p>
 
-        <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+        <div className="text-xs text-gray-400 mt-1">
           {achievement.date}
         </div>
       </div>

@@ -3,12 +3,22 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import PropTypes from "prop-types";
 import BlurImage from "@/public/image/placeholder/blur.jpg";
+import { trackEvent } from "@/lib/analytics-client";
 
 export default function ProjectCard({ project, index, activeCategory }) {
 	return (
 		<>
 			{project.category.includes(parseInt(activeCategory)) && (
-				<Link href={"projects/" + project.slug} key={index}>
+				<Link
+					href={"projects/" + project.slug}
+					key={index}
+					onClick={() => {
+						trackEvent(
+							"project_click",
+							{ slug: project.slug, title: project.title, year: project.year },
+							{ targetId: project.slug, label: `Project: ${project.title}` }
+						);
+					}}>
 					<motion.div
 						className="z-10 relative flex justify-center items-start flex-col mb-5 md:px-10 w-full h-auto bg-gray-400 group/tes py-20 px-5 md:py-2 aspect-video "
 						initial={{
