@@ -3,19 +3,20 @@ import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 config.autoAddCss = false;
 import "./nprogress.css";
+
 import ClientLayout from "./ClientLayout";
 
 export const metadata = {
-    title: "Abdul Ahad | Portofolio",
+	title: "Abdul Ahad | Portofolio",
 
-    description:
+	description:
 		"My name is Abdul Ahad, I'm a Front-end developer and I'm passionate about it. I'm currently studying at ISBM University.",
 
-    author: "Abdul Ahad",
-    siteUrl: "https://www.alvalens.my.id",
-    applicationName: "Alvalens",
+	author: "Abdul Ahad",
+	siteUrl: "https://www.alvalens.my.id",
+	applicationName: "Alvalens",
 
-    keywords: [
+	keywords: [
 		"ahad",
 		"abdul",
 		"ahad abdul",
@@ -26,7 +27,7 @@ export const metadata = {
 
 	],
 
-    openGraph: {
+	openGraph: {
 		type: "website",
 		url: "#",
 		title: "Abdul Ahad | Portofolio",
