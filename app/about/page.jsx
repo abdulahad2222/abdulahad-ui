@@ -2,18 +2,18 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import Button from "@/components/Button";
-import Image from "next/legacy/image";
+import Image from "next/image";
 import FixedButton from "@/components/FixedButton";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
+import { faChevronLeft, faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import Quote from "./components/quote/quote.jsx";
 import Skills from "./components/skills/skills.jsx";
 import Experience from "./components/experience.jsx";
 import Education from "./components/education.jsx";
 
 // images
-import Hero from "@/public/image/me2.jpg";
+import Hero from "@/public/image/ahad_2.webp";
 
 import Hr from "@/components/Hr";
 import About from "./components/about/about.jsx";
@@ -23,82 +23,103 @@ export default function Page() {
 		window.scrollTo(0, 0);
 	}, []);
 
+	const handleScrollDown = () => {
+		window.scrollTo({
+			top: window.innerHeight * 0.85,
+			behavior: "smooth",
+		});
+	};
+
 	return (
-		<>
-			<main className="overflow-hidden bg-black text-white">
-				<FixedButton href="/#about">
-					<FontAwesomeIcon
-						icon={faChevronLeft}
-						className="text-white pr-10"
-					/>
-				</FixedButton>
-				<div className="relative h-screen gap-4 p-10 flex justify-center items-center flex-col mb-10 overflow-hidden bg-gradient-to-b from-black via-gray-950 to-neutral-950">
-					{/* hero */}
-					<div className="z-0 mb-48 md:mb-0  md:absolute top-1/4  md:right-[10%] md:-translate-y-16 ">
+		<main className="w-full overflow-x-hidden bg-black text-white selection:bg-purple-500 selection:text-white">
+			<FixedButton href="/#about">
+				<FontAwesomeIcon icon={faChevronLeft} className="text-white pr-10" />
+			</FixedButton>
+
+			{/* ========================================================================= */}
+			{/* HERO HEADER */}
+			{/* ========================================================================= */}
+			<section className="relative w-full min-h-[85vh] lg:min-h-screen pt-24 pb-12 px-4 sm:px-8 lg:px-16 flex items-center justify-center bg-gradient-to-b from-black via-[#0a0714] to-neutral-950 overflow-hidden">
+				{/* Background Glows */}
+				<div className="absolute top-1/4 right-1/4 w-72 sm:w-96 h-72 sm:h-96 bg-purple-600/15 rounded-full blur-3xl pointer-events-none" />
+				<div className="absolute bottom-1/4 left-1/4 w-72 sm:w-96 h-72 sm:h-96 bg-cyan-600/15 rounded-full blur-3xl pointer-events-none" />
+
+				<div className="container mx-auto max-w-6xl relative z-10 w-full">
+					<div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
+						{/* Left Column: Intro Text */}
 						<motion.div
-							initial={{ scale: 1 }}
-							animate={{ scale: 1.6 }}
-							transition={{ ease: "circOut", duration: 1 }}
-							className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-sm h-[400px] md:h-[600px] w-[80vw] md:w-[30vw] grayscale hover:grayscale-0 shadow-2xl border border-gray-800">
-							<Image
-								src={Hero}
-								alt="Abdul Ahad"
-								layout="fill"
-								objectFit="cover"
-								placeholder="blur"
-							/>
+							className="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-start"
+							initial={{ opacity: 0, x: -30 }}
+							animate={{ opacity: 1, x: 0 }}
+							transition={{ duration: 0.6, ease: "easeOut" }}>
+							
+							<div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-500/10 border border-purple-500/25 text-purple-300 text-xs sm:text-sm font-medium mb-3 backdrop-blur-md">
+								<span>👤 Personal Biography</span>
+							</div>
+
+							<h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-2">
+								About{" "}
+								<span className="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
+									Me
+								</span>
+							</h1>
+
+							<Hr theme="purple" />
+
+							<p className="title text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed max-w-xl mt-3 mb-6">
+								A comprehensive overview of my journey, technical background, core philosophies, and educational milestones as a front-end developer.
+							</p>
+
+							<div className="flex items-center gap-3">
+								<Button variation="primary" theme="purple" onClick={handleScrollDown}>
+									<span className="flex items-center gap-2">
+										<span>Explore Journey</span>
+										<FontAwesomeIcon icon={faArrowDown} className="text-xs" />
+									</span>
+								</Button>
+							</div>
 						</motion.div>
-					</div>
-					<div className="z-10 w-full absolute md:w-auto md:left-[10%] top-[60%] md:top-1/3 col-span-2 flex flex-col justify-center items-start md:items-start text-start px-10 pt-4 backdrop-filter backdrop-blur-sm md:backdrop-blur-none bg-gray-950/60 md:bg-transparent md:pt-0 rounded-lg md:rounded-none">
-						<h1 className="bg-transparent md:px-0 text-white text-5xl md:text-8xl font-bold">
-							About Me
-						</h1>
-						<Hr theme="purple" />
-						<p className="title text-xl mt-4 tracking-wider text-gray-300 leading-[1.7rem] mb-5 ">
-							A brief introduction about me and{" "}
-							<span className="bg-transparent text-cyan-400">
-								{" "}
-								my interest.
-							</span>
-						</p>
+
+						{/* Right Column: Hero Visual */}
 						<motion.div
-							initial={{ opacity: 0 }}
-							animate={{ opacity: 1 }}
-							transition={{ duration: 0.5, ease: "circOut" }}
-							onClick={() => {
-								window.scrollTo({
-									top: 1000,
-									behavior: "smooth",
-								});
-							}}
-							className="mb-3">
-							<Button variation="primary" theme="purple">Scroll Down</Button>
+							className="lg:col-span-5 flex justify-center items-center relative"
+							initial={{ opacity: 0, scale: 0.9 }}
+							animate={{ opacity: 1, scale: 1 }}
+							transition={{ duration: 0.6, delay: 0.1 }}>
+							
+							<div className="relative group w-full max-w-xs sm:max-w-sm lg:max-w-md">
+								<div className="absolute -inset-1.5 bg-gradient-to-r from-purple-600 via-pink-600 to-cyan-500 rounded-3xl blur-xl opacity-40 group-hover:opacity-75 transition duration-500 animate-pulse" />
+								
+								<div className="relative h-72 sm:h-88 lg:h-[440px] w-full rounded-3xl overflow-hidden border-2 border-white/20 bg-gray-900 shadow-2xl">
+									<Image
+										src={Hero}
+										alt="Abdul Ahad"
+										placeholder="blur"
+										fill
+										priority
+										sizes="(max-width: 768px) 300px, 450px"
+										className="object-cover object-center grayscale group-hover:grayscale-0 transition-all duration-500 transform group-hover:scale-105"
+									/>
+									<div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
+									<div className="absolute bottom-4 left-4 right-4 p-3 rounded-xl bg-black/75 border border-white/10 backdrop-blur-md text-center">
+										<p className="text-xs font-semibold text-white">Abdul Ahad</p>
+										<p className="text-[11px] text-purple-300">Front-End Developer & UI Specialist</p>
+									</div>
+								</div>
+							</div>
 						</motion.div>
 					</div>
 				</div>
-				{/* end hero */}
+			</section>
 
-				{/* about */}
-				<About />
-				{/* end about */}
-
-				{/* skills */}
-				<Skills />
-				{/* end skills */}
-
-				{/* experience */}
-				<Experience />
-				{/* end experience */}
-
-				{/* Education */}
-				<Education />
-				{/* end Education */}
-
-				{/* Quote */}
-				<Quote />
-				{/* end Quote */}
-
-			</main>
-		</>
+			{/* ========================================================================= */}
+			{/* SECTIONS */}
+			{/* ========================================================================= */}
+			<About />
+			<Skills />
+			<Experience />
+			<Education />
+			<Quote />
+		</main>
 	);
 }

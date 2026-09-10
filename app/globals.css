@@ -15,17 +15,19 @@ html {
 	background-color: #000000;
 	color: #ffffff;
 	scroll-behavior: smooth;
+	overflow-x: hidden;
+	width: 100%;
 }
 
 @media (max-width: 1268px) {
 	html {
-		font-size: 14px !important;
+		font-size: 15px !important;
 	}
 }
 
 @media (max-width: 768px) {
 	html {
-		font-size: 13px !important;
+		font-size: 14px !important;
 	}
 }
 
@@ -34,6 +36,8 @@ body {
 	color: #ffffff !important;
 	background-color: #000000 !important;
 	transition: background-color 0.3s ease, color 0.3s ease;
+	overflow-x: hidden;
+	width: 100%;
 }
 
 html.dark body {
@@ -50,12 +54,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .section {
-	height: 100vh;
+	width: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-color: #000000;
-	color: #ffffff;
+	position: relative;
+	overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+	.section {
+		height: 100vh;
+		min-height: 680px;
+	}
 }
 
 .navbar {
@@ -81,23 +92,7 @@ html.dark .gradient-text {
 	background-clip: text;
 }
 
-/* Text selection styling */
-::selection {
-	background-color: #667eea;
-	color: white;
-}
-
-html.dark ::selection {
-	background-color: #667eea;
-	color: white;
-}
-
-/* Section styling improvements */
-.section {
-	position: relative;
-	overflow: hidden;
-}
-
+/* Section styling background glow */
 .section::before {
 	content: '';
 	position: absolute;

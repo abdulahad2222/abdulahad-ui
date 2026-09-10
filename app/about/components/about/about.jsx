@@ -1,17 +1,20 @@
+"use client";
 import Image from "next/image";
 import Card from "./spotify/card";
 import { motion } from "framer-motion";
-import Me1 from "@/public/image/me1.jpg";
-import Me2 from "@/public/image/me2.jpg";
-import Me3 from "@/public/image/me3.jpg";
+import AhadPhoto1 from "@/public/image/ahad_1.webp";
+import AhadPhoto2 from "@/public/image/ahad_2.webp";
+import AhadPhoto3 from "@/public/image/ahad_3.webp";
 import Hr from "@/components/Hr";
 
 function Title() {
 	return (
-		<div className="mt-10 flex flex-col justify-start items-center w-full pl-10 md:pl-32">
-			<div className="flex justify-center items-center flex-col my-5 self-start ">
-				<Hr variant="long"></Hr>
-				<h1 className="text-3xl font-bold mt-3 bg-gradient-to-r from-blue-500 via-cyan-400 to-violet-500 dark:from-blue-400 dark:via-cyan-500 dark:to-violet-400 bg-clip-text text-transparent">Who Am I?</h1>
+		<div className="mt-8 mb-4 flex flex-col justify-center items-center w-full px-4 sm:px-8 max-w-6xl mx-auto text-center">
+			<div className="flex justify-center items-center flex-col my-2">
+				<Hr variant="long" />
+				<h2 className="text-3xl sm:text-4xl font-bold mt-2 bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
+					Who Am I?
+				</h2>
 			</div>
 		</div>
 	);
@@ -19,157 +22,106 @@ function Title() {
 
 export default function About() {
 	return (
-		<>
+		<div className="w-full relative px-4 sm:px-8 py-6">
 			<Title />
-			<div className="relative mx-auto container gap-4 px-10 grid grid-cols-1 md:grid-cols-2 mb-10">
-				<div className="flex justify-center items-start flex-col mb-5 ">
-					<div className="images relative w-full  aspect-square">
-						<div className="absolute top-28 left-10 w-[50%]  aspect-square grayscale hover:grayscale-0 transition-all ease duration-300">
+			<div className="relative mx-auto container max-w-6xl gap-8 lg:gap-12 grid grid-cols-1 lg:grid-cols-12 items-center mb-8">
+				{/* Left Column: Creative Photo Collage */}
+				<div className="lg:col-span-5 flex justify-center items-center">
+					<div className="relative w-full max-w-sm sm:max-w-md aspect-square rounded-3xl p-3 bg-gradient-to-br from-white/10 to-white/5 border border-white/10 backdrop-blur-xl shadow-2xl">
+						<div className="grid grid-cols-2 grid-rows-2 gap-3 w-full h-full">
+							{/* Large Image Top */}
 							<motion.div
-								initial={{ opacity: 0, scale: 0.5, x: 100 }}
-								whileInView={{
-									opacity: 1,
-									scale: 1,
-									x: 0,
-								}}
-								className="w-full h-full">
+								className="col-span-2 row-span-1 relative rounded-2xl overflow-hidden border border-white/10 shadow-lg group"
+								initial={{ opacity: 0, y: 20 }}
+								whileInView={{ opacity: 1, y: 0 }}
+								viewport={{ once: true }}
+								transition={{ duration: 0.5 }}>
 								<Image
-									src={Me1}
+									src={AhadPhoto1}
 									alt="Abdul Ahad"
-									layout="fill"
-									objectFit="cover"
-									placeholder="blur"
+									fill
+									sizes="(max-width: 768px) 300px, 400px"
+									className="object-cover object-center grayscale group-hover:grayscale-0 transition-all duration-500 transform group-hover:scale-105"
+								/>
+								<div className="absolute bottom-2 left-2 right-2 px-2.5 py-1 rounded-lg bg-black/70 border border-white/10 backdrop-blur-sm text-center">
+									<p className="text-[11px] font-semibold text-cyan-300">Front-End Engineer</p>
+								</div>
+							</motion.div>
+
+							{/* Image Bottom Left */}
+							<motion.div
+								className="col-span-1 row-span-1 relative rounded-2xl overflow-hidden border border-white/10 shadow-lg group"
+								initial={{ opacity: 0, x: -20 }}
+								whileInView={{ opacity: 1, x: 0 }}
+								viewport={{ once: true }}
+								transition={{ duration: 0.5, delay: 0.1 }}>
+								<Image
+									src={AhadPhoto2}
+									alt="Abdul Ahad"
+									fill
+									sizes="200px"
+									className="object-cover object-center grayscale group-hover:grayscale-0 transition-all duration-500 transform group-hover:scale-105"
 								/>
 							</motion.div>
-						</div>
-						<div className="absolute top-16 right-28 w-[30%]  aspect-square grayscale hover:grayscale-0 transition-all ease duration-300">
+
+							{/* Image Bottom Right */}
 							<motion.div
-								initial={{
-									opacity: 0,
-									scale: 0.5,
-									x: -100,
-								}}
-								whileInView={{
-									opacity: 1,
-									scale: 1,
-									x: 0,
-								}}
-								transition={{ delay: 0.3 }}
-								className="w-full h-full">
+								className="col-span-1 row-span-1 relative rounded-2xl overflow-hidden border border-white/10 shadow-lg group"
+								initial={{ opacity: 0, x: 20 }}
+								whileInView={{ opacity: 1, x: 0 }}
+								viewport={{ once: true }}
+								transition={{ duration: 0.5, delay: 0.2 }}>
 								<Image
-									src={Me2}
-									alt="Alvalens"
-									layout="fill"
-									objectFit="cover"
-									placeholder="blur"
-								/>
-							</motion.div>
-						</div>
-						<div className="absolute bottom-16 right-20 w-[40%]  aspect-square grayscale hover:grayscale-0 transition-all ease duration-300">
-							<motion.div
-								initial={{
-									opacity: 0,
-									scale: 0.5,
-									x: -100,
-								}}
-								whileInView={{
-									opacity: 1,
-									scale: 1,
-									x: 0,
-								}}
-								transition={{
-									delay: 0.5,
-								}}
-								className="w-full h-full">
-								<Image
-									src={Me3}
+									src={AhadPhoto3}
 									alt="Abdul Ahad"
-									layout="fill"
-									objectFit="cover"
-									placeholder="blur"
+									fill
+									sizes="200px"
+									className="object-cover object-center grayscale group-hover:grayscale-0 transition-all duration-500 transform group-hover:scale-105"
 								/>
 							</motion.div>
 						</div>
 					</div>
 				</div>
-				<motion.div
-					className="flex justify-center items-start flex-col mb-5 md:px-10"
-					initial={{
-						opacity: 0,
-						x: 200,
-					}}
-					whileInView={{
-						opacity: 1,
-						x: 0,
-					}}
-					transition={{
-						delay: 0.5,
 
-						type: "spring",
-					}}>
-					<h2 className="text-2xl font-bold tracking-wider mb-3 text-white">
+				{/* Right Column: Bio Narrative & Spotify */}
+				<motion.div
+					className="lg:col-span-7 flex flex-col justify-center items-start text-left"
+					initial={{ opacity: 0, x: 30 }}
+					whileInView={{ opacity: 1, x: 0 }}
+					viewport={{ once: true }}
+					transition={{ duration: 0.5 }}>
+					<div className="flex flex-wrap items-center gap-2 mb-3">
+						<div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/25 text-cyan-400 text-xs font-semibold">
+							<span>⚡ 3+ Years Experience</span>
+						</div>
+						<div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/25 text-purple-300 text-xs font-semibold">
+							<span>🏛️ MCA @ ISBM University</span>
+						</div>
+					</div>
+
+					<h3 className="text-2xl sm:text-3xl font-bold tracking-tight mb-3 text-white">
 						Abdul Ahad
-					</h2>
-					<p className="text-gray-300 text-justify title text-lg leading-relaxed">
-						Hey there, I’m Abdul Ahad, a
-						<span className="text-white font-semibold">
-							{" "}passionate Front-End Developer
-						</span>{" "}
-						with around
-						<span className="text-white font-semibold">
-							{" "}3+ years of professional experience
-						</span>{" "}
-						in building modern, responsive, and user-friendly web applications.
-						Based in
-						<span className="text-white font-semibold">
-							{" "}Lucknow, India,
-						</span>{" "}
-						I currently work at
-						<span className="text-white font-semibold">
-							{" "}Next Olive Technologies Pvt Ltd,
-						</span>{" "}
-						where I focus on creating scalable UI solutions using
-						<span className="text-white font-semibold">
-							{" "}React, Next.js, Tailwind CSS, Bootstrap, Material UI, Ant Design,
-							ShadCN UI, and Framer Motion
-						</span>{" "}
-						alongside modern front-end and ecosystem tools.
-						<br /><br />
-						My technical expertise also includes working with
-						<span className="text-white font-semibold">
-							{" "}Headless CMS platforms
-						</span>{" "}
-						such as
-						<span className="text-white font-semibold">
-							{" "}Strapi, Sanity, and Contentful,
-						</span>{" "}
-						as well as state management and data-handling solutions like
-						<span className="text-white font-semibold">
-							{" "}Redux Toolkit, Zustand, React Query,
-						</span>{" "}
-						and API integrations using
-						<span className="text-white font-semibold">
-							{" "}REST APIs, Axios, and Fetch.
-						</span>{" "}
-						<br /><br />
-						I have hands-on experience in developing dashboards, gaming and betting UIs,
-						responsive websites, admin panels, and highly interactive components with a
-						strong emphasis on performance, scalability, and UX. Alongside front-end
-						development, I have a growing interest in
-						<span className="text-white font-semibold">
-							{" "}AI-powered web experiences
-						</span>{" "}
-						and continuously explore emerging technologies, design systems, and web
-						performance optimization techniques.
-						In today’s fast-evolving digital world, I strongly believe being a
-						<span className="text-white font-semibold"> lifelong learner</span> is key to
-						growth. Let’s build something impactful together!
+					</h3>
+
+					<p className="text-gray-300 title text-xs sm:text-sm md:text-base leading-relaxed mb-4">
+						Hey there! I&rsquo;m Abdul Ahad, a{" "}
+						<span className="text-white font-semibold">passionate Front-End Developer</span> based in Lucknow, India, currently pursuing my{" "}
+						<span className="text-cyan-400 font-semibold">Master of Computer Applications (MCA)</span> at{" "}
+						<span className="text-purple-300 font-semibold">ISBM University</span>. I work at{" "}
+						<span className="text-cyan-400 font-semibold">Next Olive Technologies Pvt Ltd</span>, creating scalable UI solutions with{" "}
+						<span className="text-purple-400 font-semibold">React, Next.js, Tailwind CSS, Bootstrap, Material UI, Ant Design, ShadCN UI, and Framer Motion</span>.
 					</p>
 
+					<p className="text-gray-300 title text-xs sm:text-sm md:text-base leading-relaxed mb-4">
+						My expertise spans developing interactive dashboards, real-time gaming & betting platforms, responsive web portals, and CMS integrations (Strapi, Contentful). I have a growing focus on{" "}
+						<span className="text-blue-400 font-semibold">AI-powered web experiences</span> and performance optimization.
+					</p>
 
-					<Card />
+					<div className="w-full mt-2">
+						<Card />
+					</div>
 				</motion.div>
 			</div>
-		</>
+		</div>
 	);
 }

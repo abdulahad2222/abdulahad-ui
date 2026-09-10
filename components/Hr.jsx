@@ -70,9 +70,9 @@ export default function Hr({ variant, theme = "blue" }) {
 						}}></motion.div>
 				</>
 			) : (
-				<div className="flex justify-center items-center flex-col my-5">
+				<div className="flex justify-center items-center flex-col my-2.5 sm:my-3">
 					<motion.div
-						className={`bg-gradient-to-r ${selectedTheme.short1} w-20 h-1.5 rounded-full mb-2 shadow-lg`}
+						className={`bg-gradient-to-r ${selectedTheme.short1} w-20 h-1.5 rounded-full mb-1.5 shadow-lg`}
 						initial={{
 							opacity: 0,
 							x: -45,

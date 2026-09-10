@@ -24,11 +24,11 @@ const Button = ({ children, variation, theme = "blue", ...props }) => {
 		<button
 			{...props}
 			className={`
-				font-bold text-base tracking-wide rounded-xl px-7 py-3.5
+				font-bold text-sm sm:text-base tracking-wide rounded-xl px-5 sm:px-7 py-2.5 sm:py-3.5
 				transition-all duration-300 ease-out
 				transform hover:scale-[1.03] active:scale-95
 				focus:outline-none focus:ring-2 focus:ring-offset-2
-				shadow-lg hover:shadow-xl
+				shadow-lg hover:shadow-xl inline-flex items-center justify-center
 				${variation === "primary" 
 					? `${selectedPrimary} text-white shadow-blue-500/30 dark:shadow-blue-600/40 hover:shadow-blue-600/50 dark:hover:shadow-blue-700/50 focus:ring-blue-400 dark:focus:ring-blue-600` 
 					: `${selectedSecondary} shadow-slate-400/30 dark:shadow-slate-700/40 hover:shadow-slate-500/40 dark:hover:shadow-slate-600/50 focus:ring-blue-400 dark:focus:ring-blue-600`

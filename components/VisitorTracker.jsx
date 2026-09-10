@@ -107,11 +107,19 @@ export default function VisitorTracker() {
       timeZone,
     };
 
-    fetch("/api/analytics/track", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
-    }).catch(() => {});
+    const scheduleTrack =
+      typeof window !== "undefined" && "requestIdleCallback" in window
+        ? (cb) => window.requestIdleCallback(cb, { timeout: 2000 })
+        : (cb) => setTimeout(cb, 100);
+
+    scheduleTrack(() => {
+      fetch("/api/analytics/track", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+        keepalive: true,
+      }).catch(() => {});
+    });
   }, [pathname, searchParams]);
 
   // 2. High-Precision Active Time Tracker

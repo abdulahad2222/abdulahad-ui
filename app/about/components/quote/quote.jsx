@@ -5,7 +5,7 @@ import { useIntersectionObserver } from "./useIntersectionObserver";
 
 function Wrapper({ children }) {
 	return (
-		<div className="min-h-[80vh] mx-auto container  p-10 grid grid-cols-1 mt-10 ">
+		<div className="min-h-[35vh] sm:min-h-[50vh] mx-auto container px-4 sm:px-8 py-10 flex items-center justify-center">
 			<motion.div
 				className="flex justify-center items-center flex-col mb-5 "
 				initial={{

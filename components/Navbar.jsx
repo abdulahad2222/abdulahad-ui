@@ -1,181 +1,171 @@
 "use client";
 import { useRef, useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
-import ThemeToggle from "./ThemeToggle";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+	faHome,
+	faUser,
+	faFolderOpen,
+	faEnvelope,
+	faTimes,
+	faArrowRight,
+} from "@fortawesome/free-solid-svg-icons";
+import {
+	faGithub,
+	faLinkedin,
+	faInstagram,
+	faDiscord,
+} from "@fortawesome/free-brands-svg-icons";
+
+const navLinks = [
+	{
+		id: "home",
+		href: "/#home",
+		num: "01",
+		title: "Home",
+		subtitle: "Main landing & hero introduction",
+		icon: faHome,
+		color: "from-cyan-500 to-blue-500",
+		glow: "hover:border-cyan-500/50 hover:shadow-cyan-500/20",
+	},
+	{
+		id: "about",
+		href: "/about",
+		num: "02",
+		title: "About",
+		subtitle: "Biography, skills & career journey",
+		icon: faUser,
+		color: "from-purple-500 to-pink-500",
+		glow: "hover:border-purple-500/50 hover:shadow-purple-500/20",
+	},
+	{
+		id: "projects",
+		href: "/projects",
+		num: "03",
+		title: "Projects",
+		subtitle: "Production apps, UI & AI solutions",
+		icon: faFolderOpen,
+		color: "from-blue-500 to-cyan-400",
+		glow: "hover:border-blue-500/50 hover:shadow-blue-500/20",
+	},
+	{
+		id: "contact",
+		href: "/#contact",
+		num: "04",
+		title: "Contact",
+		subtitle: "Inquiries, collaborations & socials",
+		icon: faEnvelope,
+		color: "from-pink-500 to-rose-400",
+		glow: "hover:border-pink-500/50 hover:shadow-pink-500/20",
+	},
+];
 
 const NavItems = ({ isNavOpen, setIsNavOpen }) => {
-	const [isMobile, setIsMobile] = useState(false);
-
 	const handleItemClick = () => {
 		setIsNavOpen(false);
 	};
-	const navVariant = {
-		open: {
-			clipPath: `circle(1920px at calc(100% - 40px) 40px)`,
-			transition: {
-				type: "spring",
-				stiffness: 400,
-				damping: 40,
-			},
-		},
-		closed: {
-			clipPath: "circle(0px at calc(100% - 120px) 35px)",
-			transition: {
-				delay: 0.5,
-				type: "spring",
-				stiffness: 400,
-				damping: 30,
-			},
-		},
-	};
-	useEffect(() => {
-		const updateScreenWidth = () => {
-			setIsMobile(window.innerWidth <= 768);
-		};
-
-		// Initial check and event listener
-		updateScreenWidth();
-		window.addEventListener("resize", updateScreenWidth);
-
-		// Clean up the event listener on unmount
-		return () => {
-			window.removeEventListener("resize", updateScreenWidth);
-		};
-	}, []);
-
-	// Check screen width and adjust clipPath for smaller screens
-	if (isMobile) {
-		(navVariant.open = {
-			clipPath: `circle(1920px at calc(100% - 40px) 40px)`,
-			transition: {
-				type: "tween",
-			},
-		}),
-			(navVariant.closed = {
-				clipPath: "circle(0px at calc(100% - 35px) 35px)",
-				transition: {
-					delay: 0.5,
-					type: "spring",
-					stiffness: 400,
-					damping: 40,
-				},
-			});
-	} else {
-		(navVariant.open = {
-			clipPath: `circle(2444px at calc(100% - 40px) 40px)`,
-			transition: {
-				type: "spring",
-				stiffness: 400,
-				damping: 40,
-			},
-		}),
-			(navVariant.closed = {
-				clipPath: "circle(0px at calc(100% - 120px) 35px)",
-				transition: {
-					delay: 0.5,
-					type: "spring",
-					stiffness: 400,
-					damping: 40,
-				},
-			});
-	}
-	const itemVariants = {
-		open: (custom) => ({
-			opacity: 1,
-			x: 0,
-			rotate: 0,
-			transition: {
-				delay: custom,
-				type: "spring",
-				stiffness: 400,
-				damping: 40,
-			},
-		}),
-		closed: {
-			opacity: 0,
-			x: -80,
-			rotate: 0,
-			transition: {
-				type: "spring",
-				stiffness: 400,
-				damping: 40,
-			},
-		},
-	};
 
 	return (
-		<>
-			<motion.div
-				className={`fixed z-[45] w-full h-screen flex items-center justify-center backdrop-blur-sm transition-all ease duration-700 overflow-hidden`}
-				variants={navVariant}
-				animate={isNavOpen ? "open" : "closed"}
-				initial={false}>
-				<div className="relative backdrop-blur-sm opacity-95 flex flex-col items-center space-x-8 min-h-[100vh] bg-gray-700 min-w-[100vw] ">
-					<div className="flex flex-col items-center space-y-8 my-auto mx-0 z-50">
-						{/* title */}
-						<motion.h1
-							variants={itemVariants}
-							animate={isNavOpen ? "open" : "closed"}
-							className="text-6xl font-bold text-white ">
-							Menu
-						</motion.h1>
-						<Link href="/#home">
-							<div
-								className="text-2xl font-bold text-white"
-								onClick={handleItemClick}>
-								<motion.h2
-									className="text-white"
-									variants={itemVariants}
-									animate={isNavOpen ? "open" : "closed"}
-									custom={0.1}>
-									Home
-								</motion.h2>
-							</div>
-						</Link>
-						<Link href="/about">
-							<div
-								onClick={handleItemClick}
-								className="text-2xl font-bold text-white">
-								<motion.h2
-									className="text-white"
-									variants={itemVariants}
-									animate={isNavOpen ? "open" : "closed"}
-									custom={0.2}>
-									About
-								</motion.h2>
-							</div>
-						</Link>
-						<Link href="/projects">
-							<div
-								onClick={handleItemClick}
-								className="text-2xl font-bold text-white">
-								<motion.h2
-									className="text-white"
-									variants={itemVariants}
-									animate={isNavOpen ? "open" : "closed"}
-									custom={0.3}>
-									Projects
-								</motion.h2>
-							</div>
-						</Link>
-						<Link href="/#contact">
-							<div
-								onClick={handleItemClick}
-								className="text-2xl font-bold text-white">
-								<motion.h2
-									className="text-white"
-									variants={itemVariants}
-									animate={isNavOpen ? "open" : "closed"}
-									custom={0.4}>
-									Contact
-								</motion.h2>
-							</div>
-						</Link>
+		<AnimatePresence>
+			{isNavOpen && (
+				<motion.div
+					initial={{ opacity: 0 }}
+					animate={{ opacity: 1 }}
+					exit={{ opacity: 0 }}
+					transition={{ duration: 0.3 }}
+					className="fixed inset-0 z-[60] w-full h-screen bg-black/95 backdrop-blur-2xl flex flex-col justify-between p-6 sm:p-10 lg:p-16 overflow-y-auto">
+					{/* Ambient Lights */}
+					<div className="absolute top-1/4 left-1/4 w-80 h-80 bg-blue-600/15 rounded-full blur-3xl pointer-events-none" />
+					<div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-purple-600/15 rounded-full blur-3xl pointer-events-none" />
+
+					{/* Top Header Bar */}
+					<div className="relative z-10 flex items-center justify-between w-full max-w-5xl mx-auto pb-4 border-b border-white/10">
+						<span className="text-xs sm:text-sm font-semibold tracking-widest text-gray-400 uppercase">
+							Navigation Menu
+						</span>
+						<button
+							onClick={handleItemClick}
+							aria-label="Close Menu"
+							className="p-2.5 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-white hover:rotate-90 transition-all duration-300">
+							<FontAwesomeIcon icon={faTimes} className="text-lg" />
+						</button>
 					</div>
-				</div>
-			</motion.div>
-		</>
+
+					{/* Main Nav Cards Grid */}
+					<div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-5xl mx-auto my-auto py-6">
+						{navLinks.map((item, index) => (
+							<motion.div
+								key={item.id}
+								initial={{ opacity: 0, y: 25 }}
+								animate={{ opacity: 1, y: 0 }}
+								transition={{ delay: index * 0.08, duration: 0.4 }}>
+								<Link
+									href={item.href}
+									prefetch={true}
+									onClick={handleItemClick}
+									className={`group block p-4 sm:p-5 rounded-2xl bg-white/[0.03] border border-white/10 ${item.glow} backdrop-blur-xl shadow-xl transition-all duration-300 hover:scale-[1.02] hover:bg-white/[0.06]`}>
+									<div className="flex items-center justify-between mb-2">
+										<span className="text-xs font-mono font-bold text-gray-400">
+											{item.num}
+										</span>
+										<div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${item.color} flex items-center justify-center text-white text-xs shadow-md group-hover:scale-110 transition-transform`}>
+											<FontAwesomeIcon icon={item.icon} />
+										</div>
+									</div>
+
+									<h3 className="text-xl sm:text-2xl font-bold text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-cyan-300 transition-colors mb-1">
+										{item.title}
+									</h3>
+									<p className="text-xs text-gray-400 leading-normal">
+										{item.subtitle}
+									</p>
+								</Link>
+							</motion.div>
+						))}
+					</div>
+
+					{/* Bottom Social Strip */}
+					<div className="relative z-10 flex flex-col sm:flex-row items-center justify-between gap-4 w-full max-w-5xl mx-auto pt-4 border-t border-white/10 text-xs text-gray-400">
+						<p>© 2025 Abdul Ahad • Frontend Developer</p>
+						<div className="flex items-center gap-3">
+							<a
+								href="https://github.com/abdulahad66"
+								target="_blank"
+								rel="noopener noreferrer"
+								aria-label="GitHub"
+								className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-white/15 transition-all">
+								<FontAwesomeIcon icon={faGithub} />
+							</a>
+							<a
+								href="https://www.linkedin.com/in/abdulahad-dev/"
+								target="_blank"
+								rel="noopener noreferrer"
+								aria-label="LinkedIn"
+								className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-blue-600 transition-all">
+								<FontAwesomeIcon icon={faLinkedin} />
+							</a>
+							<a
+								href="https://instagram.com"
+								target="_blank"
+								rel="noopener noreferrer"
+								aria-label="Instagram"
+								className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-pink-600 transition-all">
+								<FontAwesomeIcon icon={faInstagram} />
+							</a>
+							<a
+								href="https://discord.com"
+								target="_blank"
+								rel="noopener noreferrer"
+								aria-label="Discord"
+								className="w-8 h-8 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-indigo-600 transition-all">
+								<FontAwesomeIcon icon={faDiscord} />
+							</a>
+						</div>
+					</div>
+				</motion.div>
+			)}
+		</AnimatePresence>
 	);
 };
 
@@ -200,43 +190,45 @@ const Navbar = () => {
 		<>
 			<nav
 				ref={navRef}
-				className={`navbar px-5 md:px-24 w-screen fixed transition-all ease duration-500 ${
+				className={`navbar px-5 md:px-20 w-full max-w-full fixed transition-all ease duration-500 ${
 					isNavOpen
-						? "backdrop-filter backdrop-blur-xl bg-gradient-to-r from-blue-900/90 to-purple-900/90 shadow-2xl"
+						? "backdrop-filter backdrop-blur-xl bg-gradient-to-r from-blue-950/90 to-purple-950/90 shadow-2xl"
 						: "backdrop-filter backdrop-blur-md bg-gray-950/85 border-b border-gray-800/80 shadow-lg"
-				} inset-0 flex flex-row justify-between items-center h-16 z-50 `}>
+				} inset-x-0 top-0 flex flex-row justify-between items-center h-16 z-50`}>
 				<div>
-					<h1
-						className={`text-2xl ml-2 md:ml-0 font-bold transition-colors ease duration-500 bg-gradient-to-r ${
-							isNavOpen
-								? "from-white to-blue-100 bg-clip-text text-transparent"
-								: "from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent"
-						}`}>
-						 Abdul Ahad 
-					</h1>
+					<Link href="/#home" prefetch={true}>
+						<h1 className="text-xl sm:text-2xl font-extrabold transition-colors ease duration-500 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent cursor-pointer">
+							Abdul Ahad
+						</h1>
+					</Link>
 				</div>
 				<div className="flex flex-row items-center gap-4">
 					<button
-						className="burger button flex flex-col justify-center items-center space-y-1.5 "
+						aria-label="Toggle Navigation Menu"
+						className="burger button flex flex-col justify-center items-center space-y-1.5 p-2 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition-colors"
 						onClick={toggleNav}>
 						<div
-							className={`w-10 h-1 rounded-full transition-all ease duration-300 ${
+							className={`w-6 h-0.5 rounded-full transition-all ease duration-300 ${
 								isNavOpen
-									? "rotate-45 bg-white translate-y-[2px]"
+									? "rotate-45 bg-white translate-y-[4px]"
 									: "bg-gradient-to-r from-cyan-400 to-blue-500"
-							}`}></div>
+							}`}
+						/>
 						<div
-							className={`w-10 h-1 rounded-full transition-all ease duration-300 ${
+							className={`w-6 h-0.5 rounded-full transition-all ease duration-300 ${
 								isNavOpen
-									? "-rotate-45 -translate-y-2 bg-white"
+									? "-rotate-45 -translate-y-1 bg-white"
 									: "bg-gradient-to-r from-purple-500 to-pink-500"
-							}`}></div>
+							}`}
+						/>
 					</button>
 				</div>
 			</nav>
-			{/* items */}
+
+			{/* Fullscreen Creative Menu Overlay */}
 			<NavItems isNavOpen={isNavOpen} setIsNavOpen={setIsNavOpen} />
 		</>
 	);
 };
+
 export default Navbar;
