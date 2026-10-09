@@ -4,6 +4,7 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 config.autoAddCss = false;
 import "./nprogress.css";
 
+
 import ClientLayout from "./ClientLayout";
 
 export const metadata = {
