@@ -7,7 +7,7 @@
         "A modern, responsive stock photography and royalty-free media discovery platform powered by the Pexels API. ShotByAhad provides users with access to millions of high-resolution photos and videos shared by talented creators worldwide.",
         "Features an intuitive interface with real-time keyword search, curated trending categories (Nature, Travel, Architecture, Animals, People, Technology, Abstract), high-definition previews, dark mode support, and seamless responsive masonry grid layouts."
       ],
-      "year": "2025",
+      "year": "2026",
       "preview": "https://shortbyahad.netlify.app/",
       "code": "",
       "thumbnail": "/image/projects/web/shortbyahad/shortbyahad-thumbnale-img.png",
@@ -61,7 +61,6 @@
         1
       ]
     },
-    
     {
       "show": false,
       "title": "Client Personal Protfolio Website",
@@ -138,7 +137,6 @@
       "images": [
         "/image/projects/web/gamaNeo-247/gamaNeo-247-img1.png",
         "/image/projects/web/gamaNeo-247/gamaNeo-247-img2.png"
-     
       ],
       "tech": [
         "React.js",
@@ -155,7 +153,7 @@
         1
       ]
     },
-     {
+    {
       "show": true,
       "title": "DOD (Doctors on Duty)",
       "desc": [
@@ -620,8 +618,5 @@
         1
       ]
     }
-    
-   
-    
   ]
 }
