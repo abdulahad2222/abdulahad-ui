@@ -18,6 +18,16 @@ const CONTACTS = {
 // Projects data
 const PROJECTS = [
 	{
+		id: "p0",
+		name: "ShotByAhad",
+		title: "Stock Photography & Royalty-Free Media Platform",
+		year: "2025",
+		description: "A modern, responsive stock photography and royalty-free media platform powered by the Pexels API, featuring instant search, curated categories, high-resolution downloads, and dark mode support.",
+		skills: ["React.js", "Next.js", "JavaScript", "Tailwind CSS", "Pexels API", "REST API", "Responsive Design"],
+		url: "https://shortbyahad.netlify.app/",
+		thumbnail: "/image/projects/web/shortbyahad/shortbyahad-thumbnale-img.png"
+	},
+	{
 		id: "p1",
 		name: "GamaNeo247",
 		title: "Online Betting Platform",

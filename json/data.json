@@ -2,6 +2,36 @@
   "Projects": [
     {
       "show": true,
+      "title": "ShotByAhad",
+      "desc": [
+        "A modern, responsive stock photography and royalty-free media discovery platform powered by the Pexels API. ShotByAhad provides users with access to millions of high-resolution photos and videos shared by talented creators worldwide.",
+        "Features an intuitive interface with real-time keyword search, curated trending categories (Nature, Travel, Architecture, Animals, People, Technology, Abstract), high-definition previews, dark mode support, and seamless responsive masonry grid layouts."
+      ],
+      "year": "2025",
+      "preview": "https://shortbyahad.netlify.app/",
+      "code": "",
+      "thumbnail": "/image/projects/web/shortbyahad/shortbyahad-thumbnale-img.png",
+      "images": [
+        "/image/projects/web/shortbyahad/shortbyahad-1.png",
+        "/image/projects/web/shortbyahad/shortbyahad-2.png"
+      ],
+      "tech": [
+        "React.js",
+        "Next.js",
+        "JavaScript",
+        "Tailwind CSS",
+        "Pexels API",
+        "REST API",
+        "Lucide React",
+        "Responsive Design"
+      ],
+      "slug": "shortbyahad",
+      "category": [
+        1
+      ]
+    },
+    {
+      "show": true,
       "title": "Lcwale.com",
       "desc": [
         "Developed a responsive, real-time betting and casino platform using React.js and Node.js. Integrated third-party APIs for live sports data, built dynamic UI components, and translated Figma/PSD designs into mobile-first interfaces. Ensured cross-browser compatibility and accessibility.",
