@@ -87,7 +87,7 @@ const NavItems = ({ isNavOpen, setIsNavOpen }) => {
 						<button
 							onClick={handleItemClick}
 							aria-label="Close Menu"
-							className="p-2.5 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-white hover:rotate-90 transition-all duration-300">
+							className="w-10 h-10 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-white flex items-center justify-center hover:rotate-90 transition-all duration-300">
 							<FontAwesomeIcon icon={faTimes} className="text-lg" />
 						</button>
 					</div>

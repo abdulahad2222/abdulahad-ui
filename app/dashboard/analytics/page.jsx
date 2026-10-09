@@ -448,8 +448,16 @@ export default function AnalyticsOverviewPage() {
                     <td className="text-emerald-400 font-semibold">
                       {formatSeconds(s.activeSeconds)}
                     </td>
-                    <td className="text-slate-400">
-                      {new Date(s.startedAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+                    <td>
+                      <div className="text-slate-300 font-medium whitespace-nowrap">
+                        {new Date(s.startedAt).toLocaleDateString("en-US", {
+                          month: "short",
+                          day: "numeric",
+                        })}
+                      </div>
+                      <div className="text-[11px] text-slate-500 whitespace-nowrap">
+                        {new Date(s.startedAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+                      </div>
                     </td>
                     <td className="text-right">
                       <Link

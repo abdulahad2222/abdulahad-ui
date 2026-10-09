@@ -141,8 +141,16 @@ export default function EventsFeedPage() {
                     <td className="font-mono text-slate-400">
                       {e.path}
                     </td>
-                    <td className="text-slate-400">
-                      {new Date(e.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' })}
+                    <td>
+                      <div className="text-slate-300 font-medium whitespace-nowrap">
+                        {new Date(e.timestamp).toLocaleDateString("en-US", {
+                          month: "short",
+                          day: "numeric",
+                        })}
+                      </div>
+                      <div className="text-[11px] text-slate-500 whitespace-nowrap">
+                        {new Date(e.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' })}
+                      </div>
                     </td>
                     <td className="text-right">
                       <Link
