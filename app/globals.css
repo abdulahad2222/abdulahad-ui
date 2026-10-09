@@ -60,6 +60,11 @@ h1, h2, h3, h4, h5, h6 {
 	justify-content: center;
 	position: relative;
 	overflow: hidden;
+	background-color: #030712;
+	isolation: isolate;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	transform: translate3d(0, 0, 0);
 }
 
 @media (min-width: 1024px) {

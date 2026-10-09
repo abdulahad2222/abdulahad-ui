@@ -57,10 +57,10 @@ export default function HomePage() {
 			{/* ========================================================================= */}
 			<section
 				id="home"
-				className="section bg-gradient-to-b from-black via-[#060814] to-neutral-950 text-white pt-20 pb-8 sm:pt-24 sm:pb-12 lg:py-0 lg:h-screen flex items-center justify-center relative overflow-hidden">
+				className="section bg-black bg-gradient-to-b from-black via-[#060814] to-neutral-950 text-white pt-20 pb-8 sm:pt-24 sm:pb-12 lg:py-0 lg:h-screen flex items-center justify-center relative overflow-hidden">
 				{/* Ambient Glows */}
-				<div className="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-64 sm:w-96 h-64 sm:h-96 bg-blue-600/20 rounded-full blur-3xl pointer-events-none" />
-				<div className="absolute bottom-1/4 right-1/4 w-64 sm:w-96 h-64 sm:h-96 bg-purple-600/20 rounded-full blur-3xl pointer-events-none" />
+				<div className="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-64 sm:w-96 h-64 sm:h-96 bg-blue-600/20 rounded-full blur-3xl pointer-events-none transform-gpu" />
+				<div className="absolute bottom-1/4 right-1/4 w-64 sm:w-96 h-64 sm:h-96 bg-purple-600/20 rounded-full blur-3xl pointer-events-none transform-gpu" />
 
 				<div className="container mx-auto max-w-7xl px-4 sm:px-8 lg:pl-24 lg:pr-12 xl:pl-28 xl:pr-16 relative z-10 w-full">
 					<div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 xl:gap-14 items-center">
@@ -236,10 +236,10 @@ export default function HomePage() {
 			{/* ========================================================================= */}
 			<section
 				id="about"
-				className="section bg-gradient-to-b from-neutral-950 via-gray-950 to-black text-white py-8 sm:py-12 lg:py-0 lg:h-screen flex items-center justify-center relative overflow-hidden">
+				className="section bg-[#030712] bg-gradient-to-b from-neutral-950 via-[#070b14] to-black text-white py-8 sm:py-12 lg:py-0 lg:h-screen flex items-center justify-center relative overflow-hidden">
 				{/* Background Glows */}
-				<div className="absolute top-1/3 right-1/4 w-64 sm:w-96 h-64 sm:h-96 bg-purple-600/15 rounded-full blur-3xl pointer-events-none" />
-				<div className="absolute bottom-1/4 left-1/3 w-64 sm:w-80 h-64 sm:h-80 bg-blue-600/15 rounded-full blur-3xl pointer-events-none" />
+				<div className="absolute top-1/3 right-1/4 w-64 sm:w-96 h-64 sm:h-96 bg-purple-600/15 rounded-full blur-3xl pointer-events-none transform-gpu" />
+				<div className="absolute bottom-1/4 left-1/3 w-64 sm:w-80 h-64 sm:h-80 bg-blue-600/15 rounded-full blur-3xl pointer-events-none transform-gpu" />
 
 				<div className="container mx-auto max-w-7xl px-4 sm:px-8 lg:pl-24 lg:pr-12 xl:pl-28 xl:pr-16 relative z-10 w-full">
 					<div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 xl:gap-14 items-center">
@@ -352,10 +352,10 @@ export default function HomePage() {
 			{/* ========================================================================= */}
 			<section
 				id="projects"
-				className="section bg-gradient-to-b from-black via-[#080d1a] to-neutral-950 text-white py-8 sm:py-12 lg:py-0 lg:h-screen flex items-center justify-center relative overflow-hidden">
+				className="section bg-[#030712] bg-gradient-to-b from-black via-[#080d1a] to-neutral-950 text-white py-8 sm:py-12 lg:py-0 lg:h-screen flex items-center justify-center relative overflow-hidden">
 				{/* Background Glows */}
-				<div className="absolute top-1/4 left-1/3 w-64 sm:w-96 h-64 sm:h-96 bg-cyan-600/15 rounded-full blur-3xl pointer-events-none" />
-				<div className="absolute bottom-1/4 right-1/4 w-64 sm:w-80 h-64 sm:h-80 bg-blue-600/15 rounded-full blur-3xl pointer-events-none" />
+				<div className="absolute top-1/4 left-1/3 w-64 sm:w-96 h-64 sm:h-96 bg-cyan-600/15 rounded-full blur-3xl pointer-events-none transform-gpu" />
+				<div className="absolute bottom-1/4 right-1/4 w-64 sm:w-80 h-64 sm:h-80 bg-blue-600/15 rounded-full blur-3xl pointer-events-none transform-gpu" />
 
 				<div className="container mx-auto max-w-7xl px-4 sm:px-8 lg:pl-24 lg:pr-12 xl:pl-28 xl:pr-16 relative z-10 w-full">
 					<div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 xl:gap-14 items-center">
@@ -485,10 +485,10 @@ export default function HomePage() {
 			{/* ========================================================================= */}
 			<section
 				id="contact"
-				className="section bg-gradient-to-b from-neutral-950 via-gray-950 to-black text-white py-8 sm:py-12 lg:py-0 lg:h-screen flex items-center justify-center relative overflow-hidden">
+				className="section bg-[#030712] bg-gradient-to-b from-neutral-950 via-gray-950 to-black text-white py-8 sm:py-12 lg:py-0 lg:h-screen flex items-center justify-center relative overflow-hidden">
 				{/* Background Glows */}
-				<div className="absolute top-1/3 left-1/4 w-64 sm:w-96 h-64 sm:h-96 bg-pink-600/15 rounded-full blur-3xl pointer-events-none" />
-				<div className="absolute bottom-1/4 right-1/3 w-64 sm:w-80 h-64 sm:h-80 bg-purple-600/15 rounded-full blur-3xl pointer-events-none" />
+				<div className="absolute top-1/3 left-1/4 w-64 sm:w-96 h-64 sm:h-96 bg-pink-600/15 rounded-full blur-3xl pointer-events-none transform-gpu" />
+				<div className="absolute bottom-1/4 right-1/3 w-64 sm:w-80 h-64 sm:h-80 bg-purple-600/15 rounded-full blur-3xl pointer-events-none transform-gpu" />
 
 				<div className="container mx-auto max-w-7xl px-4 sm:px-8 lg:pl-24 lg:pr-12 xl:pl-28 xl:pr-16 relative z-10 w-full">
 					<div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 xl:gap-14 items-center">
